@@ -1,0 +1,83 @@
+# this repo
+# =========
+
+docs/.bundle/
+docs/vendor/
+docs/_site/
+docs/.sass-cache/
+
+
+                      #
+    ###  #  #   ###  ####   ##  ## #
+   #     #  #  #      #    #  # # # #
+    ##   #  #   ##    #    #### # # #
+      #  #  #     #   #    #    # # #
+   ###    ###  ###     ##   ##  #   #
+            #
+          ##
+# source: https://github.com/github/gitignore/blob/master/Global
+
+# Cloud9 IDE - http://c9.io
+# ===========
+
+.c9revisions
+.c9
+
+# Dropbox settings and caches
+# ===========
+
+.dropbox
+.dropbox.attr
+.dropbox.cache
+
+# MacOS
+# ===========
+
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+# ==========
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
