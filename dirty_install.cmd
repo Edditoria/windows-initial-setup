@@ -6,6 +6,7 @@ setlocal enableextensions enabledelayedexpansion
 
 set downloads_dir=.\downloads\
 set recipes_dir=.\recipes\
+set program_menu_allusers=%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\
 :: #todo: get script path and add to all paths
 
 
@@ -56,8 +57,11 @@ start /w "" %downloads_dir%%a_7_zip_x64_filename% /S
 echo Setting options...
 reg import %recipes_dir%7-zip\options.reg
 :: #todo: handle errors in options.reg
-:: #todo: change start menu folder
-:: #todo: add icon to desktop
-:: #todo: add icon to win 8 and win 10 metro menu
+echo Customizing user experience...
+:: Customize program menu (App List) in Start Menu
+copy /-y "%program_menu_allusers%7-Zip\7-Zip File Manager.lnk" "%program_menu_allusers%7-Zip File Manager.lnk"
+:: Add shortcut to Desktop
+copy /-y "%program_menu_allusers%7-Zip\7-Zip File Manager.lnk" "%USERPROFILE%\Desktop\7-Zip File Manager.lnk"
+rmdir /s /q "%program_menu_allusers%7-Zip"
 echo [done]
 echo.
