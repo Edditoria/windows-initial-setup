@@ -6,6 +6,9 @@ docs/vendor/
 docs/_site/
 docs/.sass-cache/
 
+downloads/*
+!downloads/readme.txt
+
 
                       #
     ###  #  #   ###  ####   ##  ## #
