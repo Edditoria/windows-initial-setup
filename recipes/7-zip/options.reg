@@ -1,0 +1,25 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\7-zip]
+"Lang"="zh-tw"
+; note: Choose from "-" (English), "zh-tw", "zh-cn" into "Lang"
+; #todo: create variable to change language
+
+[HKEY_CURRENT_USER\Software\7-zip\FM]
+"ShowDots"=dword:00000001
+"ShowRealFileIcons"=dword:00000001
+
+[HKEY_CURRENT_USER\Software\7-zip\Options]
+"CascadedMenu"=dword:00000001
+"MenuIcons"=dword:00000001
+"ContextMenu"=dword:00001224
+; note: "ContextMenu"=dword:00001224 includes the following items:
+; - Open archive
+; - Extract to <Folder>
+; - Add to <Archive>.7z
+; - Add to <Archive>.zip
+
+; #todo: Register current user to default program (total 3)
+; #todo: Register all users to default program (total 3)
+; #todo: Integrate 7-Zip to shell context menu
+; #todo: Integrate 7-Zip to shell context menu (32-bit)

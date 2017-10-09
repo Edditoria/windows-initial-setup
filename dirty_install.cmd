@@ -53,9 +53,11 @@ if "%start_install%"=="y" (
 
 echo Installing 7-Zip x64...
 start /w "" %downloads_dir%%a_7_zip_x64_filename% /S
-:: todo: setting options
-:: todo: change start menu folder
-:: todo: add icon to desktop
-:: todo: add icon to win 8 and win 10 metro menu
+echo Setting options...
+reg import %recipes_dir%7-zip\options.reg
+:: #todo: handle errors in options.reg
+:: #todo: change start menu folder
+:: #todo: add icon to desktop
+:: #todo: add icon to win 8 and win 10 metro menu
 echo [done]
 echo.
