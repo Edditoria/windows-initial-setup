@@ -28,7 +28,8 @@ echo Please read them carefully:
 echo - This script: https://github.com/Edditoria/windows-initial-setup/blob/master/LICENSE.md
 echo.
 
-:user_confirm
+:: Ask for Confirmation
+
 set /p start_install="Do you want to start the installations? (type [y] to continue) "
 if "%start_install%"=="y" (
 	echo.
@@ -36,7 +37,7 @@ if "%start_install%"=="y" (
 ) else (
 	echo.
 	echo [error] This script will continue only if you answer "y"
-	exit /b
+	exit /b 1
 )
 
 :start_install
