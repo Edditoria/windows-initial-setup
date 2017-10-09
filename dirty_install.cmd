@@ -2,11 +2,17 @@
 setlocal enableextensions enabledelayedexpansion
 
 
-:: Variables
+:: Variables for General Purposes
 
 set downloads_dir=.\downloads\
 set recipes_dir=.\recipes\
 :: #todo: get script path and add to all paths
+
+
+:: Variables for installation files
+
+set a_7_zip_x64_filename=7z1604-x64.exe
+:: note: check and update the filenames carefully
 
 
 :: Show Notice
@@ -26,6 +32,7 @@ echo Before you install any package, please read their license agreements.
 echo When you download and install, you already agree their terms.
 echo Please read them carefully:
 echo - This script: https://github.com/Edditoria/windows-initial-setup/blob/master/LICENSE.md
+echo - 7-Zip: http://www.7-zip.org/license.txt
 echo.
 
 :: Ask for Confirmation
@@ -41,5 +48,14 @@ if "%start_install%"=="y" (
 )
 
 :start_install
-echo Start installation from here #todo
+
+:: Install 7-Zip
+
+echo Installing 7-Zip x64...
+start /w "" %downloads_dir%%a_7_zip_x64_filename% /S
+:: todo: setting options
+:: todo: change start menu folder
+:: todo: add icon to desktop
+:: todo: add icon to win 8 and win 10 metro menu
+echo [done]
 echo.
