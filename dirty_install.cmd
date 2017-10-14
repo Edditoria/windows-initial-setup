@@ -59,9 +59,9 @@ reg import %recipes_dir%7-zip\options.reg
 :: #todo: handle errors in options.reg
 echo Customizing user experience...
 :: Customize program menu (App List) in Start Menu
-copy /-y "%program_menu_allusers%7-Zip\7-Zip File Manager.lnk" "%program_menu_allusers%7-Zip File Manager.lnk"
+copy /y "%program_menu_allusers%7-Zip\7-Zip File Manager.lnk" "%program_menu_allusers%7-Zip File Manager.lnk"
 :: Add shortcut to Desktop
-copy /-y "%program_menu_allusers%7-Zip\7-Zip File Manager.lnk" "%USERPROFILE%\Desktop\7-Zip File Manager.lnk"
+copy /y "%program_menu_allusers%7-Zip\7-Zip File Manager.lnk" "%USERPROFILE%\Desktop\7-Zip File Manager.lnk"
 rmdir /s /q "%program_menu_allusers%7-Zip"
 echo [done]
 echo.
