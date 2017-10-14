@@ -13,6 +13,7 @@ set program_menu_allusers=%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\
 :: Variables for installation files
 
 set a_7_zip_x64_filename=7z1604-x64.exe
+set chrome_filename=ChromeStandaloneSetup64.exe
 :: note: check and update the filenames carefully
 
 
@@ -34,6 +35,7 @@ echo When you download and install, you already agree their terms.
 echo Please read them carefully:
 echo - This script: https://github.com/Edditoria/windows-initial-setup/blob/master/LICENSE.md
 echo - 7-Zip: http://www.7-zip.org/license.txt
+echo - Google Chrome: https://www.google.com/chrome/browser/privacy/eula_text.html
 echo.
 
 :: Ask for Confirmation
@@ -63,5 +65,14 @@ copy /y "%program_menu_allusers%7-Zip\7-Zip File Manager.lnk" "%program_menu_all
 :: Add shortcut to Desktop
 copy /y "%program_menu_allusers%7-Zip\7-Zip File Manager.lnk" "%USERPROFILE%\Desktop\7-Zip File Manager.lnk"
 rmdir /s /q "%program_menu_allusers%7-Zip"
+echo [done]
+echo.
+
+
+:: Install Google Chrome
+
+echo Installing Google Chrome...
+start /w "" %downloads_dir%%chrome_filename% /silent /install
+:: #todo setting options
 echo [done]
 echo.
