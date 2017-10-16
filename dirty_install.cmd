@@ -95,7 +95,10 @@ echo.
 
 echo Installing LibreOffice (Still, x86)...
 set install_args=ADDLOCAL^=ALL ALLUSERS^=1 CREATEDESKTOPLINK^=1 RebootYesNo^=No ISCHECKFORPRODUCTUPDATES^=1 REGISTER_ALL_MSO_TYPES^=1 VC_REDIST^=1 QUICKSTART^=0
-msiexec /i "%downloads_dir%%libreoffice_filename%" /passive /norestart %install_args%
-:: #todo setting options
+start /w "" msiexec /i "%downloads_dir%%libreoffice_filename%" /passive /norestart %install_args%
+echo Setting options...
+set options_dir=%APPDATA%\LibreOffice\4\user\
+mkdir %options_dir%
+copy /y "%recipes_dir%libreoffice\registrymodifications.xcu.zh-HK.xml" "%options_dir%registrymodifications.xcu"
 echo [done]
 echo.
