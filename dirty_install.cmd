@@ -14,6 +14,7 @@ set program_menu_allusers=%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\
 
 set a_7_zip_x64_filename=7z1604-x64.exe
 set chrome_filename=ChromeStandaloneSetup64.exe
+set libreoffice_filename=LibreOffice_5.3.6_Win_x86.msi
 :: note: check and update the filenames carefully
 
 
@@ -37,6 +38,7 @@ echo Please read them carefully:
 echo - This script: https://github.com/Edditoria/windows-initial-setup/blob/master/LICENSE.md
 echo - 7-Zip: http://www.7-zip.org/license.txt
 echo - Google Chrome: https://www.google.com/chrome/browser/privacy/eula_text.html
+echo - LibreOffice: https://www.libreoffice.org/about-us/licenses/
 echo.
 
 
@@ -85,5 +87,15 @@ if exist "%PROGRAMFILES(X86)%\%master_preferences%" (
 if exist "%PROGRAMFILES%\%master_preferences%" (
 	copy /y "%recipes_dir%google-chrome\master_preferences.json" "%PROGRAMFILES%\%master_preferences%"
 )
+echo [done]
+echo.
+
+
+:: Install LibreOffice
+
+echo Installing LibreOffice (Still, x86)...
+set install_args=ADDLOCAL^=ALL ALLUSERS^=1 CREATEDESKTOPLINK^=1 RebootYesNo^=No ISCHECKFORPRODUCTUPDATES^=1 REGISTER_ALL_MSO_TYPES^=1 VC_REDIST^=1 QUICKSTART^=0
+msiexec /i "%downloads_dir%%libreoffice_filename%" /passive /norestart %install_args%
+:: #todo setting options
 echo [done]
 echo.
