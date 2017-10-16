@@ -1,29 +1,29 @@
 {
-  "browser": {
-    "check_default_browser": true,
-    "show_home_button": true
-  },
-  "bookmark_bar": {
-    "show_on_all_tabs": true
-  },
-  "sync_promo": {
-   "user_skipped": false
-  },
-  "autofill": {
-    "enabled": false
-  },
-  "profile": {
-    "password_manager_enabled": false
-  },
-  "distribution": {
-    "skip_first_run_ui": true,
-    "create_all_shortcuts": true,
-    "do_not_launch_chrome": true,
-    "make_chrome_default": true,
-    "make_chrome_default_for_user": true
-  },
-  "first_run_tabs": [
-    "chrome://welcome/",
-    "chrome://newtab"
-  ]
+	"browser": {
+		"check_default_browser": true,
+		"show_home_button": true
+	},
+	"bookmark_bar": {
+		"show_on_all_tabs": true
+	},
+	"sync_promo": {
+	 "user_skipped": false
+	},
+	"autofill": {
+		"enabled": false
+	},
+	"profile": {
+		"password_manager_enabled": false
+	},
+	"distribution": {
+		"skip_first_run_ui": true,
+		"create_all_shortcuts": true,
+		"do_not_launch_chrome": true,
+		"make_chrome_default": true,
+		"make_chrome_default_for_user": true
+	},
+	"first_run_tabs": [
+		"chrome://welcome/",
+		"chrome://newtab"
+	]
 }
