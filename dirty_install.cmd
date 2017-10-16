@@ -4,8 +4,8 @@ setlocal enableextensions enabledelayedexpansion
 
 :: Variables for General Purposes
 
-set downloads_dir=.\downloads\
-set recipes_dir=.\recipes\
+set downloads_dir=%~dp0downloads\
+set recipes_dir=%~dp0recipes\
 set program_menu_allusers=%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\
 :: #todo: get script path and add to all paths
 
