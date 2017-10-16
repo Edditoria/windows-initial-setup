@@ -28,6 +28,7 @@ echo - Require "Run as adminisrator" in command prompt
 echo - Assume running in Windows 8 and 10
 echo.
 
+
 :: Show Licenses
 
 echo Before you install any package, please read their license agreements.
@@ -37,6 +38,7 @@ echo - This script: https://github.com/Edditoria/windows-initial-setup/blob/mast
 echo - 7-Zip: http://www.7-zip.org/license.txt
 echo - Google Chrome: https://www.google.com/chrome/browser/privacy/eula_text.html
 echo.
+
 
 :: Ask for Confirmation
 
@@ -50,7 +52,9 @@ if "%start_install%"=="y" (
 	exit /b 1
 )
 
+
 :start_install
+
 
 :: Install 7-Zip
 
