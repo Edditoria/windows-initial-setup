@@ -27,6 +27,7 @@ echo - Expect all installation files in folder: .\downloads\
 echo - Work on x64 system (not x86)
 echo - Require "Run as adminisrator" in command prompt
 echo - Assume running in Windows 8 and 10
+echo - Design for zh-HK user (not en-US, zh-TW, zh-CN, etc.)
 echo.
 
 
