@@ -67,11 +67,9 @@ echo Installing 7-Zip x64...
 start /w "" %downloads_dir%%a_7_zip_x64_filename% /S
 echo Setting options...
 reg import %recipes_dir%7-zip\options.reg
-:: #todo: handle errors in options.reg
-echo Customizing user experience...
-:: Customize program menu (App List) in Start Menu
+echo Simplifying app list in start menu,
 copy /y "%program_menu_allusers%7-Zip\7-Zip File Manager.lnk" "%program_menu_allusers%7-Zip File Manager.lnk"
-:: Add shortcut to Desktop
+echo and adding shortcut to Desktop...
 copy /y "%program_menu_allusers%7-Zip\7-Zip File Manager.lnk" "%USERPROFILE%\Desktop\7-Zip File Manager.lnk"
 rmdir /s /q "%program_menu_allusers%7-Zip"
 echo [done]
