@@ -111,6 +111,7 @@ echo.
 
 echo Installing VLC x64...
 start /w "" %downloads_dir%%vlc_filename% /S
-:: #todo setting options
+echo Setting options...
+reg import %recipes_dir%vlc\options.reg
 echo [done]
 echo.
