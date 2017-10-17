@@ -15,6 +15,7 @@ set program_menu_allusers=%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\
 set a_7_zip_x64_filename=7z1604-x64.exe
 set chrome_filename=ChromeStandaloneSetup64.exe
 set libreoffice_filename=LibreOffice_5.3.6_Win_x86.msi
+set vlc_filename=vlc-2.2.6-win64.exe
 :: note: check and update the filenames carefully
 
 
@@ -40,6 +41,7 @@ echo - This script: https://github.com/Edditoria/windows-initial-setup/blob/mast
 echo - 7-Zip: http://www.7-zip.org/license.txt
 echo - Google Chrome: https://www.google.com/chrome/browser/privacy/eula_text.html
 echo - LibreOffice: https://www.libreoffice.org/about-us/licenses/
+echo - VLC: https://www.videolan.org/legal.html
 echo.
 
 
@@ -101,5 +103,14 @@ echo Setting options...
 set options_dir=%APPDATA%\LibreOffice\4\user\
 mkdir %options_dir%
 copy /y "%recipes_dir%libreoffice\registrymodifications.xcu.zh-HK.xml" "%options_dir%registrymodifications.xcu"
+echo [done]
+echo.
+
+
+:: Install VLC
+
+echo Installing VLC x64...
+start /w "" %downloads_dir%%vlc_filename% /S
+:: #todo setting options
 echo [done]
 echo.
