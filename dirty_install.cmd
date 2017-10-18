@@ -13,6 +13,7 @@ set program_menu_allusers=%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\
 :: Variables for installation files
 
 set a_7_zip_x64_filename=7z1604-x64.exe
+set adobe_acrobat_reader_filename=AcroRdrDC1500720033_MUI.exe
 set cdburnerxp_filename=cdbxp_setup_4.5.7.6623_minimal.exe
 set chrome_filename=ChromeStandaloneSetup64.exe
 set flash_npapi_filename=install_flash_player.exe
@@ -42,6 +43,7 @@ echo When you download and install, you already agree their terms.
 echo Please read them carefully:
 echo - This script: https://github.com/Edditoria/windows-initial-setup/blob/master/LICENSE.md
 echo - 7-Zip: http://www.7-zip.org/license.txt
+echo - Adobe Acrobat Reader DC: http://www.adobe.com/content/dam/Adobe/en/legal/licenses-terms/pdf/PlatformClients_PC_WWEULA-en_US-20150407_1357.pdf
 echo - CDBurnerXP: https://cdburnerxp.se/help/intro/license
 echo - Flash: http://www.adobe.com/content/dam/acom/en/legal/licenses-terms/pdf/Flash_Player_27_0.pdf
 echo - Google Chrome: https://www.google.com/chrome/browser/privacy/eula_text.html
@@ -107,6 +109,15 @@ echo Setting options...
 set options_dir=%APPDATA%\LibreOffice\4\user\
 mkdir %options_dir%
 copy /y "%recipes_dir%libreoffice\registrymodifications.xcu.zh-HK.xml" "%options_dir%registrymodifications.xcu"
+echo [done]
+echo.
+
+
+:: Install Adobe Acrobat Reader DC
+
+echo Installing Adobe Acrobat Reader DC...
+set install_args=/sPB /rs /norestart /sl "1028" /msi ALLUSERS=1 ENABLE_CHROMEEXT=0 EULA_ACCEPT=YES
+start /w "" %downloads_dir%%adobe_acrobat_reader_filename% %install_args%
 echo [done]
 echo.
 
