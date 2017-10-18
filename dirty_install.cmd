@@ -17,7 +17,8 @@ set adobe_acrobat_reader_filename=AcroRdrDC1500720033_MUI.exe
 set cdburnerxp_filename=cdbxp_setup_4.5.7.6623_minimal.exe
 set chrome_filename=ChromeStandaloneSetup64.exe
 set flash_npapi_filename=install_flash_player.exe
-set jre_filename=jre-8u144-windows-i586.exe
+set jre_x86_filename=jre-8u144-windows-i586.exe
+set jre_x64_filename=jre-8u144-windows-x64.exe
 set libreoffice_filename=LibreOffice_5.3.6_Win_x86.msi
 set vlc_filename=vlc-2.2.6-win64.exe
 :: note: check and update the filenames carefully
@@ -159,5 +160,8 @@ echo [done]
 
 set install_args=/s auto_update=1 web_analytics=0 eula=0 reboot=0 sponsors=0 removeoutofdatejres=1
 echo Installing Java Runtime x86...
-start /w "" %downloads_dir%%jre_filename% %install_args%
+start /w "" %downloads_dir%%jre_x86_filename% %install_args%
+echo [done]
+echo Installing Java Runtime x64...
+start /w "" %downloads_dir%%jre_x64_filename% %install_args%
 echo [done]
