@@ -13,6 +13,7 @@ set program_menu_allusers=%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\
 :: Variables for installation files
 
 set a_7_zip_x64_filename=7z1604-x64.exe
+set cdburnerxp_filename=cdbxp_setup_4.5.7.6623_minimal.exe
 set chrome_filename=ChromeStandaloneSetup64.exe
 set libreoffice_filename=LibreOffice_5.3.6_Win_x86.msi
 set vlc_filename=vlc-2.2.6-win64.exe
@@ -39,6 +40,7 @@ echo When you download and install, you already agree their terms.
 echo Please read them carefully:
 echo - This script: https://github.com/Edditoria/windows-initial-setup/blob/master/LICENSE.md
 echo - 7-Zip: http://www.7-zip.org/license.txt
+echo - CDBurnerXP: https://cdburnerxp.se/help/intro/license
 echo - Google Chrome: https://www.google.com/chrome/browser/privacy/eula_text.html
 echo - LibreOffice: https://www.libreoffice.org/about-us/licenses/
 echo - VLC: https://www.videolan.org/legal.html
@@ -116,3 +118,12 @@ copy /y "%program_menu_allusers%VideoLAN\VLC media player.lnk" "%program_menu_al
 rmdir /s /q "%program_menu_allusers%VideoLAN"
 echo [done]
 echo.
+
+
+:: CDBurnerXP
+
+echo Installing CDBurnerXP x86...
+set install_args=/silent /sp- /norestart /q /v"ALLUSERS=2 /qn"
+start /w "" %downloads_dir%%cdburnerxp_filename% %install_args%
+:: #todo setting options
+echo [done]
