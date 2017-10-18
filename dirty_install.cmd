@@ -15,6 +15,7 @@ set program_menu_allusers=%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\
 set a_7_zip_x64_filename=7z1604-x64.exe
 set cdburnerxp_filename=cdbxp_setup_4.5.7.6623_minimal.exe
 set chrome_filename=ChromeStandaloneSetup64.exe
+set flash_npapi_filename=install_flash_player.exe
 set libreoffice_filename=LibreOffice_5.3.6_Win_x86.msi
 set vlc_filename=vlc-2.2.6-win64.exe
 :: note: check and update the filenames carefully
@@ -41,6 +42,7 @@ echo Please read them carefully:
 echo - This script: https://github.com/Edditoria/windows-initial-setup/blob/master/LICENSE.md
 echo - 7-Zip: http://www.7-zip.org/license.txt
 echo - CDBurnerXP: https://cdburnerxp.se/help/intro/license
+echo - Flash: http://www.adobe.com/content/dam/acom/en/legal/licenses-terms/pdf/Flash_Player_27_0.pdf
 echo - Google Chrome: https://www.google.com/chrome/browser/privacy/eula_text.html
 echo - LibreOffice: https://www.libreoffice.org/about-us/licenses/
 echo - VLC: https://www.videolan.org/legal.html
@@ -130,4 +132,11 @@ reg import %recipes_dir%cdburnerxp\options.reg
 set options_dir=%ALLUSERSPROFILE%\Canneverbe Limited\CDBurnerXP\
 mkdir "%options_dir%"
 copy /y "%recipes_dir%cdburnerxp\Application.ini" "%options_dir%Application.ini"
+echo [done]
+
+
+:: Install Flash NPAPI
+
+echo Installing Flash Player NPAPI x86...
+start /w "" %downloads_dir%%flash_npapi_filename% -install
 echo [done]
