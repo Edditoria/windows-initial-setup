@@ -2,28 +2,6 @@
 setlocal enableextensions enabledelayedexpansion
 
 
-:: Variables for General Purposes
-
-set downloads_dir=%~dp0downloads\
-set recipes_dir=%~dp0recipes\
-set program_menu_allusers=%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\
-:: #todo: get script path and add to all paths
-
-
-:: Variables for installation files
-
-set a_7_zip_x64_filename=7z1604-x64.exe
-set adobe_acrobat_reader_filename=AcroRdrDC1500720033_MUI.exe
-set cdburnerxp_filename=cdbxp_setup_4.5.7.6623_minimal.exe
-set chrome_filename=ChromeStandaloneSetup64.exe
-set flash_npapi_filename=install_flash_player.exe
-set jre_x86_filename=jre-8u144-windows-i586.exe
-set jre_x64_filename=jre-8u144-windows-x64.exe
-set libreoffice_filename=LibreOffice_5.3.6_Win_x86.msi
-set vlc_filename=vlc-2.2.6-win64.exe
-:: note: check and update the filenames carefully
-
-
 :: Show Notice
 
 echo.
@@ -52,6 +30,28 @@ echo - Java: http://www.oracle.com/technetwork/java/javase/terms/license/
 echo - LibreOffice: https://www.libreoffice.org/about-us/licenses/
 echo - VLC: https://www.videolan.org/legal.html
 echo.
+
+
+:: Variables for installation files
+
+set a_7_zip_x64_filename=7z1604-x64.exe
+set adobe_acrobat_reader_filename=AcroRdrDC1500720033_MUI.exe
+set cdburnerxp_filename=cdbxp_setup_4.5.7.6623_minimal.exe
+set chrome_filename=ChromeStandaloneSetup64.exe
+set flash_npapi_filename=install_flash_player.exe
+set jre_x86_filename=jre-8u144-windows-i586.exe
+set jre_x64_filename=jre-8u144-windows-x64.exe
+set libreoffice_filename=LibreOffice_5.3.6_Win_x86.msi
+set vlc_filename=vlc-2.2.6-win64.exe
+:: note: check and update the filenames carefully
+
+
+:: Variables for General Purposes
+
+set downloads_dir=%~dp0downloads\
+set recipes_dir=%~dp0recipes\
+set program_menu_allusers=%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\
+:: #todo: get script path and add to all paths
 
 
 :: Ask for Confirmation
