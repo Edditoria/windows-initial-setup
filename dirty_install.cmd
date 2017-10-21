@@ -143,7 +143,9 @@ echo.
 :: Install Adobe Acrobat Reader DC
 
 echo Installing Adobe Acrobat Reader DC...
-set install_args=/sPB /rs /norestart /sl "1028" /msi ALLUSERS=1 ENABLE_CHROMEEXT=0 EULA_ACCEPT=YES
+if "%lang%"=="en-US" set adobe_lang_id=1033
+if "%lang%"=="zh-HK" set adobe_lang_id=1028
+set install_args=/sPB /rs /norestart /sl %adobe_lang_id% /msi ALLUSERS=1 ENABLE_CHROMEEXT=0 EULA_ACCEPT=YES
 start /w "" %downloads_dir%%adobe_acrobat_reader_filename% %install_args%
 echo [done]
 echo.
