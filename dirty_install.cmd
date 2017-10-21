@@ -51,8 +51,33 @@ set vlc_filename=vlc-2.2.6-win64.exe
 set downloads_dir=%~dp0downloads\
 set recipes_dir=%~dp0recipes\
 set program_menu_allusers=%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\
+set lang_list=en-US (default), zh-HK
 :: #todo: get script path and add to all paths
 
+
+:: Language
+
+set lang=%~1
+if "[%lang%]"=="[]" (
+	set lang=en-US
+	echo You are going to install in language: !lang!
+	goto lang_pass
+)
+if "%lang%"=="en-US" (
+	echo You are going to install in language: %lang%
+	goto lang_pass
+)
+if "%lang%"=="zh-HK" (
+	echo You are going to install in language: %lang%
+	goto lang_pass
+)
+:: else
+echo [error] Argument(s) is not supported
+echo Acceptable arguments: %lang_list%
+exit /b 1
+
+:lang_pass
+echo.
 
 :: Ask for Confirmation
 
