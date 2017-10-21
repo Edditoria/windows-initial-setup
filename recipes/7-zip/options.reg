@@ -1,8 +1,5 @@
 Windows Registry Editor Version 5.00
 
-[HKEY_CURRENT_USER\Software\7-zip]
-"Lang"="zh-tw"
-
 [HKEY_CURRENT_USER\Software\7-zip\FM]
 "ShowDots"=dword:00000001
 "ShowRealFileIcons"=dword:00000001
