@@ -135,7 +135,7 @@ start /w "" msiexec /i "%downloads_dir%%libreoffice_filename%" /passive /noresta
 echo Setting options...
 set options_dir=%APPDATA%\LibreOffice\4\user\
 mkdir %options_dir%
-copy /y "%recipes_dir%libreoffice\registrymodifications.xcu.zh-HK.xml" "%options_dir%registrymodifications.xcu"
+copy /y "%recipes_dir%libreoffice\registrymodifications.xcu.%lang%.xml" "%options_dir%registrymodifications.xcu"
 echo [done]
 echo.
 
