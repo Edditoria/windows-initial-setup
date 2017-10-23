@@ -167,7 +167,7 @@ echo.
 :: CDBurnerXP
 
 echo Installing CDBurnerXP x86...
-set install_args=/silent /sp- /norestart /q /v"ALLUSERS=2 /qn" /loadinf^=%recipes_dir%cdburnerxp\options.cfg
+set install_args=/silent /sp- /norestart /q /v"ALLUSERS=2 /qn" /loadinf^=%recipes_dir%cdburnerxp\options.%lang%.cfg
 start /w "" %downloads_dir%%cdburnerxp_filename% %install_args%
 echo Setting options...
 reg import %recipes_dir%cdburnerxp\options.%lang%.reg
