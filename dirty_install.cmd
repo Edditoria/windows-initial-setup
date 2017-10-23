@@ -170,7 +170,7 @@ echo Installing CDBurnerXP x86...
 set install_args=/silent /sp- /norestart /q /v"ALLUSERS=2 /qn" /loadinf^=%recipes_dir%cdburnerxp\options.cfg
 start /w "" %downloads_dir%%cdburnerxp_filename% %install_args%
 echo Setting options...
-reg import %recipes_dir%cdburnerxp\options.reg
+reg import %recipes_dir%cdburnerxp\options.%lang%.reg
 set options_dir=%ALLUSERSPROFILE%\Canneverbe Limited\CDBurnerXP\
 mkdir "%options_dir%"
 copy /y "%recipes_dir%cdburnerxp\Application.ini" "%options_dir%Application.ini"
