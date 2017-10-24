@@ -5,13 +5,16 @@ setlocal enableextensions enabledelayedexpansion
 :: Show Notice
 
 echo.
+echo Usage:
+echo.
+echo   dirty_install [lang]
+echo.
 echo This is a temporary script to get things done:
-echo - Expect correct file name and version for each installation
-echo - Expect all installation files in folder: .\downloads\
-echo - Work on x64 system (not x86)
+echo - For each installation file, expect correct file name, version and folder (.\downloads\)
+echo - Only work on Windows 8 and 10 x64 system (not x86)
 echo - Require "Run as adminisrator" in command prompt
-echo - Assume running in Windows 8 and 10
-echo - Design for zh-HK user (not en-US, zh-TW, zh-CN, etc.)
+echo - Work on en-US or zh-HK system (zh-TW and zh-CN are not ready)
+echo - Expect applications install in the same language with the OS
 echo.
 
 
@@ -164,7 +167,7 @@ echo [done]
 echo.
 
 
-:: CDBurnerXP
+:: Install CDBurnerXP
 
 echo Installing CDBurnerXP x86...
 set install_args=/silent /sp- /norestart /q /v"ALLUSERS=2 /qn" /loadinf^=%recipes_dir%cdburnerxp\options.%lang%.cfg

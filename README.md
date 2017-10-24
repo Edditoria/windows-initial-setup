@@ -7,7 +7,7 @@ This repo contains some scripts to automate:
 - generally useful for household
 - after install a new Windows.
 
-If you often install Windows for others and you don't know what exactly s\/he needs, you may find this repo useful.
+If you often install Windows for others and you don't know what exactly s/he needs, you may find this repo useful.
 
 > This repo is not ready to serve. Please stay tune.
 
@@ -33,3 +33,41 @@ This repo is setup under the following assumptions:
 - **Minimal Windows Installation**: Most of things should be done by scripts **after** a simple installation. So, you can customize the system according to the needs of the users.
 - **Less Storage**: This repo should consume less storage for USB stick. A 32GB USB has better compatibility on old PCs. It is going to store a lot of OS ISOs and utilities for repair cases.
 - **Software licensing**: No matter you install software for personal or business use, you and your users are restricted by the license terms of that software, e.g. distribution (you) and user agreement (user) of Oracle Java Runtime Environment.
+
+# Usage
+
+This repo is still evolving. I call the installation command `dirty_install`.
+
+By default, it will install all applications in en-US for en-US Windows.
+
+```batch
+dirty_install
+```
+
+Since I build for Hong Kong users, it can install all applications in zh-HK for zh-HK Windows.
+
+```batch
+dirty_install zh-HK
+```
+
+# Applications To Install
+
+| App | Language Depends On |
+| --- | ------------------- |
+| 7-Zip                   | repo recipe |
+| Adobe Acrobat Reader DC | Windows (TBC) |
+| Adobe Flash NPAPI       | Windows |
+| CDBurnerXP              | repo recipe |
+| Google Chrome           | installer |
+| JRE (Java Runtime) x86  | Windows |
+| JRE (Java Runtime) x64  | Windows |
+| LibreOffice             | repo recipe |
+| VLC Media Player        | repo recipe |
+
+# To-Do
+
+- [ ] Fix bugs in `dirty_install`
+- [ ] Auto download from official site
+- [ ] Supports zh-TW and zh-CN
+- [ ] Supports XP, Vista, 7, 8, 8.1 and 10
+- [ ] Auto detect OS and language
