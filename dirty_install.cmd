@@ -183,7 +183,7 @@ echo [done]
 :: Install Flash NPAPI
 
 echo Installing Flash Player NPAPI x86...
-start /w "" %downloads_dir%%flash_npapi_filename% -install
+start /w "" %downloads_dir%%flash_npapi_filename% -install -au 0
 echo [done]
 
 
