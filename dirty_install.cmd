@@ -53,9 +53,21 @@ set vlc_filename=vlc-2.2.6-win64.exe
 
 set downloads_dir=%~dp0downloads\
 set recipes_dir=%~dp0recipes\
+set utils_dir=%~dp0utils\
 set program_menu_allusers=%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\
 set lang_list=en-US (default), zh-HK
 :: #todo: get script path and add to all paths
+
+
+:: Check Admin Rights
+
+call "%utils_dir%is_admin.cmd" true
+echo.
+if "%is_admin%"=="true" goto is_admin_pass
+:: else
+exit /b 1
+
+:is_admin_pass
 
 
 :: Language
@@ -81,6 +93,7 @@ exit /b 1
 
 :lang_pass
 echo.
+
 
 :: Ask for Confirmation
 
