@@ -12,12 +12,12 @@
 echo Check if this script is running as an administrator...
 call :is_admin
 if %errorlevel% equ 0 (
-	set is_admin=true
-	echo [done] Running as an administrator
+	set "is_admin=true"
+	echo [done]
 	exit /b 0
 ) else (
-	set is_admin=false
-	echo [error] Access denied. Not running as an administrator
+	set "is_admin=false"
+	echo [error] Access denied
 	exit /b 2
 )
 

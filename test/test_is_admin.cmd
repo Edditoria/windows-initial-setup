@@ -10,10 +10,12 @@
 
 @echo off
 setlocal enableextensions enabledelayedexpansion
+echo.
+
 
 :: Check is_admin.cmd exists
 
-set cmd_file=%~dp0..\utils\is_admin.cmd
+set "cmd_file=%~dp0..\utils\is_admin.cmd"
 if not exist "%cmd_file%" (
 	echo [error] Cannot find is_admin.cmd file
 	exit /b 1
@@ -23,24 +25,25 @@ if not exist "%cmd_file%" (
 :: Check input argument
 :: and set %expect_is_admin% and %expect_errorlevel%
 
-set expect_is_admin=%~1
+set "expect_is_admin=%~1"
 if "[%expect_is_admin%]"=="[]" (
-	set expect_is_admin=true
-	set expect_errorlevel=0
+	set "expect_is_admin=true"
+	set "expect_errorlevel=0"
 	goto expect_is_admin_pass
 )
 if "%expect_is_admin%"=="true" (
-	set expect_errorlevel=0
+	set "expect_errorlevel=0"
 	goto expect_is_admin_pass
 )
 if "%expect_is_admin%"=="false" (
-	set expect_errorlevel=2
+	set "expect_errorlevel=2"
 	goto expect_is_admin_pass
 )
 :: else
 echo [error] Wrong argument
 echo.
-echo Usage: test_is_admin [true | false]
+echo Usage: test_is_admin [true ^| false]
+echo.
 exit /b 1
 
 :expect_is_admin_pass
@@ -49,6 +52,7 @@ exit /b 1
 :: Start is_admin.cmd
 
 echo Running is_admin.cmd and echo the following messages:
+echo.
 echo ======= is_admin.cmd start =======
 call "%cmd_file%"
 echo ======= is_admin.cmd end   =======
@@ -57,10 +61,10 @@ echo.
 
 :: Report
 
-echo Variable %%is_admin%% = %is_admin%
-echo You %%expect_is_admin%% is %expect_is_admin%
-echo Variable %%errorlevel%% = %errorlevel%
-echo You %%expect_errorlevel%% is %expect_errorlevel%
+echo Variable %%is_admin%%     : %is_admin%
+echo You %%expect_is_admin%%   : %expect_is_admin%
+echo Variable %%errorlevel%%   : %errorlevel%
+echo You %%expect_errorlevel%% : %expect_errorlevel%
 echo.
 
 if "%is_admin%"=="%expect_is_admin%" if "%errorlevel%"=="%expect_errorlevel%" (
