@@ -85,17 +85,15 @@ echo.
 :: Ask for Confirmation
 
 set /p start_install="Do you want to start the installations? (type [y] to continue) "
-if "%start_install%"=="y" (
-	echo.
-	goto start_install
-) else (
-	echo.
-	echo [error] This script will continue only if you answer "y"
-	exit /b 1
-)
+if "%start_install%"=="y" goto confirm_pass
+:: else
+echo.
+echo [error] This script will continue only if you answer "y"
+echo.
+exit /b 1
 
-
-:start_install
+:confirm_pass
+echo.
 
 
 :: Install 7-Zip
