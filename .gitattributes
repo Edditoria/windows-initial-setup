@@ -7,6 +7,10 @@
 *.c text
 *.h text
 
+# Declare files that will always have LF line endings on checkout
+
+*.crt text eol=lf
+
 # Declare files that will always have CRLF line endings on checkout.
 
 *.bat text eol=crlf
@@ -22,3 +26,4 @@
 
 *.png binary
 *.jpg binary
+*.exe binary
