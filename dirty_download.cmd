@@ -12,17 +12,20 @@ set "curl=%utils_dir%\curl\curl.exe"
 if not exist "%curl%" exit /b 1
 set "this_dir=%cd%"
 
+
+:: Start download
+
 cd %downloads_dir%
 
-call :func_download "7-Zip" "%a_7_zip_x64_download_url%" "%a_7_zip_x64_filename%"
-call :func_download "Adobe Acrobat Reader DC" "%adobe_acrobat_reader_download_url%" "%adobe_acrobat_reader_filename%"
-call :func_download "Adobe Flash NPAPI" "%flash_npapi_download_url%" "%flash_npapi_filename%"
-call :func_download "CDBurnerXP" "%cdburnerxp_download_url%" "%cdburnerxp_filename%"
-call :func_download "Google Chrome" "%google_chrome_x64_download_url%" "%google_chrome_x64_filename%"
-call :func_download "Java Runtime x86" "%java_x86_download_url%" "%java_x86_filename%"
-call :func_download "Java Runtime x64" "%java_x64_download_url%" "%java_x64_filename%"
-call :func_download "LibreOffice" "%libreoffice_download_url%" "%libreoffice_filename%"
-call :func_download "VLC Media Player" "%vlc_x64_download_url%" "%vlc_x64_filename%"
+call :func_download "%a_7_zip_x64_fullname%" "%a_7_zip_x64_download_url%" "%a_7_zip_x64_filename%"
+call :func_download "%flash_npapi_fullname%" "%flash_npapi_download_url%" "%flash_npapi_filename%"
+call :func_download "%cdburnerxp_fullname%" "%cdburnerxp_download_url%" "%cdburnerxp_filename%"
+call :func_download "%google_chrome_x64_fullname%" "%google_chrome_x64_download_url%" "%google_chrome_x64_filename%"
+call :func_download "%java_x86_fullname%" "%java_x86_download_url%" "%java_x86_filename%"
+call :func_download "%java_x64_fullname%" "%java_x64_download_url%" "%java_x64_filename%"
+call :func_download "%libreoffice_fullname%" "%libreoffice_download_url%" "%libreoffice_filename%"
+call :func_download "%vlc_x64_fullname%" "%vlc_x64_download_url%" "%vlc_x64_filename%"
+call :func_download "%adobe_acrobat_reader_fullname%" "%adobe_acrobat_reader_download_url%" "%adobe_acrobat_reader_filename%"
 
 
 :: Actions after finishing download
