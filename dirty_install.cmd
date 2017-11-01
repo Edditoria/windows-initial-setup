@@ -2,6 +2,15 @@
 setlocal enableextensions enabledelayedexpansion
 
 
+:: Set variables
+
+call "%~dp0utils\set_dirs.cmd"
+call "%~dp0utils\set_recipes.cmd"
+if %errorlevel% neq 0 exit /b 1
+
+set "lang_list=en-US (default), zh-HK"
+
+
 :: Show Notice
 
 echo.
@@ -33,30 +42,6 @@ echo - Java: http://www.oracle.com/technetwork/java/javase/terms/license/
 echo - LibreOffice: https://www.libreoffice.org/about-us/licenses/
 echo - VLC: https://www.videolan.org/legal.html
 echo.
-
-
-:: Variables for installation files
-
-set a_7_zip_x64_filename=7z1604-x64.exe
-set adobe_acrobat_reader_filename=AcroRdrDC1500720033_MUI.exe
-set cdburnerxp_filename=cdbxp_setup_4.5.7.6623_minimal.exe
-set chrome_filename=ChromeStandaloneSetup64.exe
-set flash_npapi_filename=install_flash_player.exe
-set jre_x86_filename=jre-8u144-windows-i586.exe
-set jre_x64_filename=jre-8u144-windows-x64.exe
-set libreoffice_filename=LibreOffice_5.3.6_Win_x86.msi
-set vlc_filename=vlc-2.2.6-win64.exe
-:: note: check and update the filenames carefully
-
-
-:: Variables for General Purposes
-
-set downloads_dir=%~dp0downloads\
-set recipes_dir=%~dp0recipes\
-set utils_dir=%~dp0utils\
-set program_menu_allusers=%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\
-set lang_list=en-US (default), zh-HK
-:: #todo: get script path and add to all paths
 
 
 :: Check Admin Rights
@@ -128,7 +113,7 @@ echo.
 :: Install Google Chrome
 
 echo Installing Google Chrome...
-start /w "" %downloads_dir%%chrome_filename% /silent /install
+start /w "" %downloads_dir%%google_chrome_x64_filename% /silent /install
 echo Setting options...
 set master_preferences=Google\Chrome\Application\master_preferences
 if exist "%PROGRAMFILES(X86)%\%master_preferences%" (
@@ -168,7 +153,7 @@ echo.
 :: Install VLC
 
 echo Installing VLC x64...
-start /w "" %downloads_dir%%vlc_filename% /S
+start /w "" %downloads_dir%%vlc_x64_filename% /S
 echo Setting options...
 reg import %recipes_dir%vlc\options.%lang%.reg
 echo Simplifying app list in start menu...
@@ -202,8 +187,8 @@ echo [done]
 
 set install_args=/s auto_update=1 web_analytics=0 eula=0 reboot=0 sponsors=0 removeoutofdatejres=1
 echo Installing Java Runtime x86...
-start /w "" %downloads_dir%%jre_x86_filename% %install_args%
+start /w "" %downloads_dir%%java_x86_filename% %install_args%
 echo [done]
 echo Installing Java Runtime x64...
-start /w "" %downloads_dir%%jre_x64_filename% %install_args%
+start /w "" %downloads_dir%%java_x64_filename% %install_args%
 echo [done]
