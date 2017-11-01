@@ -1,4 +1,6 @@
 :: Purpose: Download installation files using CURL.exe
+:: Usage:
+::     dirty_download [lang]
 
 @echo off
 setlocal enableextensions enabledelayedexpansion

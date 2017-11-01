@@ -11,9 +11,10 @@ If you often install Windows for others and you don't know what exactly s/he nee
 
 > This repo is not ready to serve. Please stay tune.
 
-# Why This Repo
+# Why This Repo (*Planning*)
 
-- **Batch scripts only**: No PowerShell. No package manager. Users will not ask you question.
+- **Simple**: No package manager. No extra stuff to install. Users will not ask you question.
+- **Work in Windows XP**: Batch scripts based. No need PowerShell.
 - **Portable**: You can install things via a USB drive.
 - **Offline**: Once the file sources are ready, it does not eat your Internet bandwidth.
 
@@ -36,17 +37,21 @@ This repo is setup under the following assumptions:
 
 # Usage
 
-This repo is still evolving. I call the installation command `dirty_install`.
+This repo is still evolving. I call the commands `dirty_download` and `dirty_install`.
 
 By default, it will install all applications in en-US for en-US Windows.
 
 ```batch
+dirty_download
+
 dirty_install
 ```
 
 Since I build for Hong Kong users, it can install all applications in zh-HK for zh-HK Windows.
 
 ```batch
+dirty_download zh-HK
+
 dirty_install zh-HK
 ```
 
@@ -54,20 +59,18 @@ dirty_install zh-HK
 
 | App | Language Depends On |
 | --- | ------------------- |
-| 7-Zip                   | repo recipe |
-| Adobe Acrobat Reader DC | Windows (TBC) |
-| Adobe Flash NPAPI       | Windows |
-| CDBurnerXP              | repo recipe |
-| Google Chrome           | installer |
-| JRE (Java Runtime) x86  | Windows |
-| JRE (Java Runtime) x64  | Windows |
-| LibreOffice             | repo recipe |
-| VLC Media Player        | repo recipe |
+| 7-Zip                    | repo recipe |
+| Adobe Acrobat Reader DC  | Windows (TBC) |
+| Adobe Flash Player NPAPI | Windows |
+| CDBurnerXP               | repo recipe |
+| Google Chrome            | installer |
+| Java Runtime (JRE)       | Windows |
+| LibreOffice              | repo recipe |
+| VLC Media Player         | repo recipe |
 
 # To-Do
 
-- [ ] Fix bugs in `dirty_install`
-- [ ] Auto download from official site
+- [ ] More test and fix bugs in `dirty_download` and `dirty_install`
 - [ ] Supports zh-TW and zh-CN
 - [ ] Supports XP, Vista, 7, 8, 8.1 and 10
 - [ ] Auto detect OS and language
