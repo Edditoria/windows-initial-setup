@@ -10,7 +10,33 @@ call "%~dp0utils\set_recipes.cmd"
 if %errorlevel% neq 0 exit /b 1
 set "curl=%utils_dir%\curl\curl.exe"
 if not exist "%curl%" exit /b 1
+
+set "lang_list=en-US (default), zh-HK"
 set "this_dir=%cd%"
+
+:: Language
+
+set lang=%~1
+if "[%lang%]"=="[]" (
+	set lang=en-US
+	echo You are going to download in language: !lang!
+	goto lang_pass
+)
+if "%lang%"=="en-US" (
+	echo You are going to download in language: %lang%
+	goto lang_pass
+)
+if "%lang%"=="zh-HK" (
+	echo You are going to download in language: %lang%
+	goto lang_pass
+)
+:: else
+echo [error] Argument(s) is not supported
+echo Acceptable arguments: %lang_list%
+exit /b 1
+
+:lang_pass
+echo.
 
 
 :: Start download
