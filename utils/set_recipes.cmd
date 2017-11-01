@@ -26,8 +26,8 @@ set "adobe_acrobat_reader_download_url=ftp://ftp.adobe.com/pub/adobe/reader/win/
 
 set "cdburnerxp_recipe_name=cdburnerxp"
 set "cdburnerxp_fullname=CDBurnerXP"
-set "cdburnerxp_filename=cdbxp_setup_4.5.7.6623_minimal.exe"
-set "cdburnerxp_download_url=https://download.cdburnerxp.se/minimal/c6065a9c696c4f1e2be39e6b71e973f6/59f2fce0/cdbxp_setup_4.5.7.6623_minimal.exe"
+set "cdburnerxp_filename=cdbxp_setup_4.5.7.6623.exe"
+set "cdburnerxp_download_url=https://download.cdburnerxp.se/cdbxp_setup_4.5.7.6623.exe"
 
 set "flash_npapi_recipe_name=flash-npapi"
 set "flash_npapi_fullname=Adobe Flash Player NPAPI"
