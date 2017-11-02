@@ -113,7 +113,7 @@ echo.
 :: Install Google Chrome
 
 echo Installing %google_chrome_x64_fullname%...
-start /w "" %downloads_dir%%google_chrome_x64_filename% /silent /install
+start /w "" msiexec /i "%downloads_dir%%google_chrome_x64_filename%" /passive /norestart
 echo Setting options...
 set master_preferences=Google\Chrome\Application\master_preferences
 if exist "%PROGRAMFILES(X86)%\%master_preferences%" (

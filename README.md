@@ -50,7 +50,7 @@ dirty_install
 Since I build for Hong Kong users, it can install all applications in zh-HK for zh-HK Windows.
 
 ```batch
-dirty_download zh-HK
+dirty_download
 
 dirty_install zh-HK
 ```
@@ -63,7 +63,7 @@ dirty_install zh-HK
 | Adobe Acrobat Reader DC  | Windows (TBC) |
 | Adobe Flash Player NPAPI | Windows |
 | CDBurnerXP               | repo recipe |
-| Google Chrome            | installer |
+| Google Chrome            | Windows (TBC) |
 | Java Runtime (JRE)       | Windows |
 | LibreOffice              | repo recipe |
 | VLC Media Player         | repo recipe |

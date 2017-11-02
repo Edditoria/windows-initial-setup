@@ -36,13 +36,8 @@ set "flash_npapi_download_url=https://fpdownload.macromedia.com/pub/flashplayer/
 
 set "google_chrome_recipe_name=google-chrome"
 set "google_chrome_x64_fullname=Google Chrome (x64)"
-set "google_chrome_x64_filename=ChromeStandaloneSetup64.exe"
-set "google_chrome_x64_download_url=https://dl.google.com/tag/s/appguid%%3D%%7B8A69D345-D564-463C-AFF1-A69D9E530F96%%7D%%26iid%%3D%%7B5D03EC7A-1877-7BE0-35A7-F76979B2D685%%7D%%26lang%%3Den%%26browser%%3D4%%26usagestats%%3D0%%26appname%%3DGoogle%%2520Chrome%%26needsadmin%%3Dtrue%%26ap%%3Dx64-stable%%26installdataindex%%3Ddefaultbrowser/chrome/install/ChromeStandaloneSetup64.exe"
-:: above download link comes from:
-:: https://www.google.com/chrome/browser/desktop/index.html?system=true&standalone=1&platform=win64#eula
-set "google_chrome_x64_zhHK_download_url=https://dl.google.com/tag/s/appguid%%3D%%7B8A69D345-D564-463C-AFF1-A69D9E530F96%%7D%%26iid%%3D%%7B76F95B9F-F36F-F939-F444-93B4492FEEB2%%7D%%26lang%%3Dzh-HK%%26browser%%3D4%%26usagestats%%3D0%%26appname%%3DGoogle%%2520Chrome%%26needsadmin%%3Dtrue%%26ap%%3Dx64-stable%%26installdataindex%%3Ddefaultbrowser/chrome/install/ChromeStandaloneSetup64.exe"
-:: above download link comes from:
-:: https://www.google.com.hk/intl/zh-HK/chrome/browser/desktop/?system=true&standalone=1&platform=win64#eula
+set "google_chrome_x64_filename=googlechromestandaloneenterprise64.msi"
+set "google_chrome_x64_download_url=https://dl.google.com/tag/s/dl/chrome/install/googlechromestandaloneenterprise64.msi"
 
 set "java_recipe_name=java"
 set "java_x86_fullname=Java Runtime (JRE) (x86)"

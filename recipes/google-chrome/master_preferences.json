@@ -7,7 +7,7 @@
 		"show_on_all_tabs": true
 	},
 	"sync_promo": {
-	 "user_skipped": false
+		"user_skipped": false
 	},
 	"autofill": {
 		"enabled": false
@@ -16,6 +16,8 @@
 		"password_manager_enabled": false
 	},
 	"distribution": {
+		"msi":true,
+		"system_level": true,
 		"skip_first_run_ui": true,
 		"create_all_shortcuts": true,
 		"do_not_launch_chrome": true,
