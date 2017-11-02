@@ -120,7 +120,7 @@ if exist "%PROGRAMFILES(X86)%\%master_preferences%" (
 	copy /y "%recipes_dir%%google_chrome_recipe_name%\master_preferences.json" "%PROGRAMFILES(X86)%\%master_preferences%"
 )
 if exist "%PROGRAMFILES%\%master_preferences%" (
-	copy /y "%recipes_dir%%a_7_zip_recipe_name%\master_preferences.json" "%PROGRAMFILES%\%master_preferences%"
+	copy /y "%recipes_dir%%google_chrome_recipe_name%\master_preferences.json" "%PROGRAMFILES%\%master_preferences%"
 )
 echo [done]
 echo.
