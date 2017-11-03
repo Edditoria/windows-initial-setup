@@ -9,6 +9,7 @@ call "%~dp0utils\set_recipes.cmd"
 if %errorlevel% neq 0 exit /b 1
 
 set "lang_list=en-US (default), zh-HK"
+set "is_installer_exist=unknown"
 
 
 :: Show Notice
@@ -78,6 +79,24 @@ exit /b 1
 
 :lang_pass
 echo.
+
+
+:: Check Installation Files
+
+call "%utils_dir%is_installer_exist.cmd" "%a_7_zip_x64_filename%"
+call "%utils_dir%is_installer_exist.cmd" "%adobe_acrobat_reader_filename%"
+call "%utils_dir%is_installer_exist.cmd" "%cdburnerxp_filename%"
+call "%utils_dir%is_installer_exist.cmd" "%flash_npapi_filename%"
+call "%utils_dir%is_installer_exist.cmd" "%google_chrome_x64_filename%"
+call "%utils_dir%is_installer_exist.cmd" "%java_x86_filename%"
+call "%utils_dir%is_installer_exist.cmd" "%java_x64_filename%"
+call "%utils_dir%is_installer_exist.cmd" "%libreoffice_filename%"
+call "%utils_dir%is_installer_exist.cmd" "%vlc_x64_filename%"
+:: note: %is_installer_exist% will change from "unknown" to "false" if any file is missing
+:: note: %is_installer_exist% will not becomes "true"
+if "%is_installer_exist%"=="false" (
+	exit /b 1
+)
 
 
 :: Ask for Confirmation
