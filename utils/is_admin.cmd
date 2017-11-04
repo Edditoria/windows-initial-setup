@@ -17,7 +17,7 @@ if %errorlevel% equ 0 (
 	exit /b 0
 ) else (
 	set "is_admin=false"
-	echo [error] Access denied
+	echo [error] Access denied. Require "Run as administrator" in command prompt
 	exit /b 2
 )
 

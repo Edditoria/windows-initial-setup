@@ -17,14 +17,12 @@ set "is_installer_exist=unknown"
 echo.
 echo Usage:
 echo.
-echo   dirty_install [lang]
+echo   install [en-US | zh-HK]
 echo.
-echo This is a temporary script to get things done:
-echo - For each installation file, expect correct file name, version and folder (.\downloads\)
-echo - Only work on Windows 8 and 10 x64 system (not x86)
-echo - Require "Run as adminisrator" in command prompt
-echo - Work on en-US or zh-HK system (zh-TW and zh-CN are not ready)
-echo - Expect applications install in the same language with the OS
+echo - Expect all installers are correct version in "downloads" directory
+echo - Expect language of all applications is as same as language of OS
+echo - Only work on Windows 10 x64 (not x86)
+echo - For details: https://github.com/Edditoria/windows-initial-setup
 echo.
 
 
@@ -36,12 +34,12 @@ echo Please read them carefully:
 echo - This script: https://github.com/Edditoria/windows-initial-setup/blob/master/LICENSE.md
 echo - 7-Zip: http://www.7-zip.org/license.txt
 echo - Adobe Acrobat Reader DC: http://www.adobe.com/content/dam/Adobe/en/legal/licenses-terms/pdf/PlatformClients_PC_WWEULA-en_US-20150407_1357.pdf
+echo - Adobe Flash Player: http://www.adobe.com/content/dam/acom/en/legal/licenses-terms/pdf/Flash_Player_27_0.pdf
 echo - CDBurnerXP: https://cdburnerxp.se/help/intro/license
-echo - Flash: http://www.adobe.com/content/dam/acom/en/legal/licenses-terms/pdf/Flash_Player_27_0.pdf
 echo - Google Chrome: https://www.google.com/chrome/browser/privacy/eula_text.html
-echo - Java: http://www.oracle.com/technetwork/java/javase/terms/license/
+echo - Java Runtime (JRE): http://www.oracle.com/technetwork/java/javase/terms/license/
 echo - LibreOffice: https://www.libreoffice.org/about-us/licenses/
-echo - VLC: https://www.videolan.org/legal.html
+echo - VLC Media Player: https://www.videolan.org/legal.html
 echo.
 
 
