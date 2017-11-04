@@ -37,22 +37,20 @@ This repo is setup under the following assumptions:
 
 # Usage
 
-This repo is still evolving. I call the commands `dirty_download` and `dirty_install`.
-
 By default, it will install all applications in en-US for en-US Windows.
 
 ```batch
-dirty_download
+download
 
-dirty_install
+install
 ```
 
 Since I build for Hong Kong users, it can install all applications in zh-HK for zh-HK Windows.
 
 ```batch
-dirty_download
+download
 
-dirty_install zh-HK
+install zh-HK
 ```
 
 # Applications To Install
@@ -70,7 +68,7 @@ dirty_install zh-HK
 
 # To-Do
 
-- [ ] More test and fix bugs in `dirty_download` and `dirty_install`
+- [ ] Do more checking in `download` and `install`
 - [ ] Supports zh-TW and zh-CN
 - [ ] Supports XP, Vista, 7, 8, 8.1 and 10
 - [ ] Auto detect OS and language
