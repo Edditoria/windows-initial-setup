@@ -14,6 +14,21 @@ if not exist "%curl%" exit /b 1
 set "this_dir=%cd%"
 
 
+:: Ask for Confirmation
+
+echo All downloaded files will overwrite the current ones, even they are corrupted.
+set /p start_download="Do you want to start? (type [y] to continue) "
+if "%start_download%"=="y" goto confirm_pass
+:: else
+echo.
+echo [error] This script will continue only if you answer "y"
+echo.
+exit /b 1
+
+:confirm_pass
+echo.
+
+
 :: Start download
 
 cd %downloads_dir%
@@ -33,7 +48,7 @@ call :func_download "%adobe_acrobat_reader_fullname%" "%adobe_acrobat_reader_dow
 
 dir /w
 cd %this_dir%
-echo [done]
+echo [done] You may need to manually check the files in "downloads" directory
 echo.
 
 exit /b 0
