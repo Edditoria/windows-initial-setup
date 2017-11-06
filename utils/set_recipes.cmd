@@ -49,8 +49,8 @@ set "java_x64_download_url=http://javadl.oracle.com/webapps/download/AutoDL?Bund
 
 set "libreoffice_recipe_name=libreoffice"
 set "libreoffice_fullname=LibreOffice"
-set "libreoffice_filename=LibreOffice_5.3.6_Win_x86.msi"
-set "libreoffice_download_url=http://download.documentfoundation.org/libreoffice/stable/5.3.6/win/x86/LibreOffice_5.3.6_Win_x86.msi"
+set "libreoffice_filename=LibreOffice_5.3.7_Win_x86.msi"
+set "libreoffice_download_url=http://download.documentfoundation.org/libreoffice/stable/5.3.7/win/x86/LibreOffice_5.3.7_Win_x86.msi"
 
 set "vlc_recipe_name=vlc"
 set "vlc_x64_fullname=VLC Media Player"
