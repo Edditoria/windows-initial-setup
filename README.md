@@ -21,11 +21,12 @@ If you often install Windows for others and you don't know what exactly s/he nee
 Currently there are 2 main commands: `download` and `install`.
 
 1. Download the zip file ([link][zip-link]) and extract it into a folder
+1. Close all applications including Microsoft Edge and Internet Explorer
 1. Open command prompt with "Run as administrator"
-1. Assuming you download and extract the file in Downloads folder, do:
+1. Assuming you download and extract the files in Downloads folder, do:
 
 	```
-	cd %userprofile%\Downloads\windows-initial-setup\
+	cd %userprofile%\Downloads\windows-initial-setup-1.0.1\
 	```
 
 1. Download all files, no matter which language:
@@ -116,4 +117,4 @@ I do not own any trademark and copyright of the application software, for exampl
 
 
 [this-repo]: https://github.com/Edditoria/windows-initial-setup/
-[zip-link]: https://github.com/Edditoria/windows-initial-setup/archive/master.zip
+[zip-link]: https://github.com/Edditoria/windows-initial-setup/archive/v1.0.1.zip
