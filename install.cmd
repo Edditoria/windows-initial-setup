@@ -17,7 +17,7 @@ set "is_installer_exist=unknown"
 echo.
 echo Usage:
 echo.
-echo   install [en-US | zh-HK]
+echo   install [en-US ^| zh-HK]
 echo.
 echo - Expect all installers are correct version in "downloads" directory
 echo - Expect language of all applications is as same as language of OS
