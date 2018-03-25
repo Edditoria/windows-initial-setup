@@ -104,9 +104,9 @@ This repo is designed under the following assumptions:
 
 # Copyrights and Licenses
 
-Copyright (c) 2017 Edditoria. All rights reserved.
+Copyright (c) 2017-2018 Edditoria. All rights reserved.
 
-Code released under the [MIT License](LICENSE.md). In other words, you can use it, share it, modify the codes and distribute your work for private and commercial use. Remember to share your works to me. :pizza:
+Code released under the [MIT License](LICENSE.txt). In other words, you can use it, share it, modify the codes and distribute your work for private and commercial use. Remember to share your works to me. :pizza:
 
 Thank to awesome developers. This project uses some third-party codes and binaries, which have their own licenses:
 

@@ -31,7 +31,7 @@ echo.
 echo Before you install any package, please read their license agreements.
 echo When you download and install, you already agree their terms.
 echo Please read them carefully:
-echo - This script: https://github.com/Edditoria/windows-initial-setup/blob/master/LICENSE.md
+echo - This script: https://github.com/Edditoria/windows-initial-setup/blob/master/LICENSE.txt
 echo - 7-Zip: http://www.7-zip.org/license.txt
 echo - Adobe Acrobat Reader DC: http://www.adobe.com/content/dam/Adobe/en/legal/licenses-terms/pdf/PlatformClients_PC_WWEULA-en_US-20150407_1357.pdf
 echo - Adobe Flash Player: http://www.adobe.com/content/dam/acom/en/legal/licenses-terms/pdf/Flash_Player_27_0.pdf
