@@ -53,9 +53,9 @@ exit /b 1
 
 echo Running is_admin.cmd and echo the following messages:
 echo.
-echo ======= is_admin.cmd start =======
+echo ======= command start =======
 call "%cmd_file%"
-echo ======= is_admin.cmd end   =======
+echo ======= command end   =======
 echo.
 
 

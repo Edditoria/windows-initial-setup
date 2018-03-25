@@ -7,9 +7,15 @@ echo.
 
 call "%~dp0utils\set_dirs.cmd"
 call "%~dp0utils\set_recipes.cmd"
-if %errorlevel% neq 0 exit /b 1
-set "curl=%utils_dir%\curl\curl.exe"
-if not exist "%curl%" exit /b 1
+if %errorlevel% neq 0 (
+	echo [error] Fail in set_dirs and set_recipes
+	exit /b 1
+)
+set "curl=%utils_dir%curl\curl.exe"
+if not exist "%curl%" (
+	echo [error] Cannot find curl
+	exit /b 1
+)
 
 set "this_dir=%CD%"
 
@@ -22,7 +28,6 @@ if "%start_download%"=="y" goto confirm_pass
 :: else
 echo.
 echo [error] This script will continue only if you answer "y"
-echo.
 exit /b 1
 
 :confirm_pass

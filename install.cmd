@@ -104,7 +104,6 @@ if "%start_install%"=="y" goto confirm_pass
 :: else
 echo.
 echo [error] This script will continue only if you answer "y"
-echo.
 exit /b 1
 
 :confirm_pass
@@ -191,6 +190,7 @@ set "options_dir=%ALLUSERSPROFILE%\Canneverbe Limited\CDBurnerXP\"
 mkdir "%options_dir%"
 copy /y "%recipes_dir%%cdburnerxp_recipe_name%\Application.ini" "%options_dir%Application.ini"
 echo [done]
+echo.
 
 
 :: Install Flash NPAPI
@@ -198,6 +198,7 @@ echo [done]
 echo Installing %flash_npapi_fullname%...
 start /w "" "%downloads_dir%%flash_npapi_filename%" -install -au 0
 echo [done]
+echo.
 
 
 :: Install JRE
@@ -206,6 +207,8 @@ set "install_args=/s auto_update=1 web_analytics=0 eula=0 reboot=0 sponsors=0 re
 echo Installing %java_x86_fullname%...
 start /w "" "%downloads_dir%%java_x86_filename%" %install_args%
 echo [done]
+echo.
 echo Installing %java_x64_fullname%...
 start /w "" "%downloads_dir%%java_x64_filename%" %install_args%
 echo [done]
+echo.

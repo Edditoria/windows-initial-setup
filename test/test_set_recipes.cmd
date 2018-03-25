@@ -26,9 +26,9 @@ if not exist "%set_recipes_cmd%" (
 
 echo Running set_recipes.cmd and echo the following messages:
 echo.
-echo ======= set_recipes.cmd start =======
+echo ======= command start =======
 call "%set_recipes_cmd%"
-echo ======= set_recipes.cmd end   =======
+echo ======= command end   =======
 echo.
 if %errorlevel% neq 1 (
 	echo [error] set_recipes.cmd should exit with %%errorlevel%% 1
@@ -45,10 +45,10 @@ if not exist "%set_dirs_cmd%" (
 )
 echo Running set_recipes.cmd and echo the following messages:
 echo.
-echo ======= set_recipes.cmd start =======
+echo ======= command start =======
 call "%set_dirs_cmd%"
 call "%set_recipes_cmd%"
-echo ======= set_recipes.cmd end   =======
+echo ======= command end   =======
 echo.
 if %errorlevel% neq 0 (
 	echo [error] set_recipes.cmd should exit with %%errorlevel%% 0
