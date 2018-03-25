@@ -11,13 +11,13 @@ if %errorlevel% neq 0 exit /b 1
 set "curl=%utils_dir%\curl\curl.exe"
 if not exist "%curl%" exit /b 1
 
-set "this_dir=%cd%"
+set "this_dir=%CD%"
 
 
 :: Ask for Confirmation
 
 echo All downloaded files will overwrite the current ones, even they are corrupted.
-set /p start_download="Do you want to start? (type [y] to continue) "
+set /p "start_download=Do you want to start? (type [y] to continue) "
 if "%start_download%"=="y" goto confirm_pass
 :: else
 echo.
@@ -31,7 +31,7 @@ echo.
 
 :: Start download
 
-cd %downloads_dir%
+cd "%downloads_dir%"
 
 call :func_download "%a_7_zip_x64_fullname%" "%a_7_zip_x64_download_url%" "%a_7_zip_x64_filename%"
 call :func_download "%flash_npapi_fullname%" "%flash_npapi_download_url%" "%flash_npapi_filename%"
@@ -47,11 +47,11 @@ call :func_download "%adobe_acrobat_reader_fullname%" "%adobe_acrobat_reader_dow
 :: Actions after finishing download
 
 dir /w
-cd %this_dir%
+cd "%this_dir%"
 echo [done] You may need to manually check the files in "downloads" directory
 echo.
-
 exit /b 0
+
 
 :: Functions
 

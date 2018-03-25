@@ -56,9 +56,9 @@ exit /b 1
 
 :: Language
 
-set lang=%~1
+set "lang=%~1"
 if "[%lang%]"=="[]" (
-	set lang=en-US
+	set "lang=en-US"
 	echo You are going to install in language: !lang!
 	goto lang_pass
 )
@@ -99,7 +99,7 @@ if "%is_installer_exist%"=="false" (
 
 :: Ask for Confirmation
 
-set /p start_install="Do you want to start the installations? (type [y] to continue) "
+set /p "start_install=Do you want to start the installations? (type [y] to continue) "
 if "%start_install%"=="y" goto confirm_pass
 :: else
 echo.
@@ -114,10 +114,10 @@ echo.
 :: Install 7-Zip
 
 echo Installing %a_7_zip_x64_fullname%...
-start /w "" %downloads_dir%%a_7_zip_x64_filename% /S
+start /w "" "%downloads_dir%%a_7_zip_x64_filename%" /S
 echo Setting options...
-reg import %recipes_dir%%a_7_zip_recipe_name%\options.reg
-reg import %recipes_dir%%a_7_zip_recipe_name%\options.%lang%.reg
+reg import "%recipes_dir%%a_7_zip_recipe_name%\options.reg"
+reg import "%recipes_dir%%a_7_zip_recipe_name%\options.%lang%.reg"
 echo Simplifying app list in start menu,
 copy /y "%program_menu_allusers%7-Zip\7-Zip File Manager.lnk" "%program_menu_allusers%7-Zip File Manager.lnk"
 echo and adding shortcut to Desktop...
@@ -132,7 +132,7 @@ echo.
 echo Installing %google_chrome_x64_fullname%...
 start /w "" msiexec /i "%downloads_dir%%google_chrome_x64_filename%" /passive /norestart
 echo Setting options...
-set master_preferences=Google\Chrome\Application\master_preferences
+set "master_preferences=Google\Chrome\Application\master_preferences"
 if exist "%PROGRAMFILES(X86)%\%master_preferences%" (
 	copy /y "%recipes_dir%%google_chrome_recipe_name%\master_preferences.json" "%PROGRAMFILES(X86)%\%master_preferences%"
 )
@@ -146,11 +146,11 @@ echo.
 :: Install LibreOffice
 
 echo Installing %libreoffice_fullname%...
-set install_args=ADDLOCAL^=ALL ALLUSERS^=1 CREATEDESKTOPLINK^=1 RebootYesNo^=No ISCHECKFORPRODUCTUPDATES^=1 REGISTER_ALL_MSO_TYPES^=1 VC_REDIST^=1 QUICKSTART^=0
+set "install_args=ADDLOCAL=ALL ALLUSERS=1 CREATEDESKTOPLINK=1 RebootYesNo=No ISCHECKFORPRODUCTUPDATES=1 REGISTER_ALL_MSO_TYPES=1 VC_REDIST=1 QUICKSTART=0"
 start /w "" msiexec /i "%downloads_dir%%libreoffice_filename%" /passive /norestart %install_args%
 echo Setting options...
-set options_dir=%APPDATA%\LibreOffice\4\user\
-mkdir %options_dir%
+set "options_dir=%APPDATA%\LibreOffice\4\user\"
+mkdir "%options_dir%"
 copy /y "%recipes_dir%%libreoffice_recipe_name%\registrymodifications.xcu.%lang%.xml" "%options_dir%registrymodifications.xcu"
 echo [done]
 echo.
@@ -159,10 +159,10 @@ echo.
 :: Install Adobe Acrobat Reader DC
 
 echo Installing %adobe_acrobat_reader_fullname%...
-if "%lang%"=="en-US" set adobe_lang_id=1033
-if "%lang%"=="zh-HK" set adobe_lang_id=1028
-set install_args=/sPB /rs /norestart /sl %adobe_lang_id% /msi ALLUSERS=1 ENABLE_CHROMEEXT=0 EULA_ACCEPT=YES
-start /w "" %downloads_dir%%adobe_acrobat_reader_filename% %install_args%
+if "%lang%"=="en-US" set "adobe_lang_id=1033"
+if "%lang%"=="zh-HK" set "adobe_lang_id=1028"
+set "install_args=/sPB /rs /norestart /sl %adobe_lang_id% /msi ALLUSERS=1 ENABLE_CHROMEEXT=0 EULA_ACCEPT=YES"
+start /w "" "%downloads_dir%%adobe_acrobat_reader_filename%" %install_args%
 echo [done]
 echo.
 
@@ -170,9 +170,9 @@ echo.
 :: Install VLC
 
 echo Installing %vlc_x64_fullname%...
-start /w "" %downloads_dir%%vlc_x64_filename% /S
+start /w "" "%downloads_dir%%vlc_x64_filename%" /S
 echo Setting options...
-reg import %recipes_dir%%vlc_recipe_name%\options.%lang%.reg
+reg import "%recipes_dir%%vlc_recipe_name%\options.%lang%.reg"
 echo Simplifying app list in start menu...
 copy /y "%program_menu_allusers%VideoLAN\VLC media player.lnk" "%program_menu_allusers%VLC media player.lnk"
 rmdir /s /q "%program_menu_allusers%VideoLAN"
@@ -183,11 +183,11 @@ echo.
 :: Install CDBurnerXP
 
 echo Installing %cdburnerxp_fullname%...
-set install_args=/silent /sp- /norestart /q /v"ALLUSERS=2 /qn" /loadinf^=%recipes_dir%%cdburnerxp_recipe_name%\options.%lang%.cfg
-start /w "" %downloads_dir%%cdburnerxp_filename% %install_args%
+set "install_args=/silent /sp- /norestart /q /v^"ALLUSERS=2 /qn^" /loadinf=^"%recipes_dir%%cdburnerxp_recipe_name%\options.%lang%.cfg^""
+start /w "" "%downloads_dir%%cdburnerxp_filename%" %install_args%
 echo Setting options...
-reg import %recipes_dir%%cdburnerxp_recipe_name%\options.%lang%.reg
-set options_dir=%ALLUSERSPROFILE%\Canneverbe Limited\CDBurnerXP\
+reg import "%recipes_dir%%cdburnerxp_recipe_name%\options.%lang%.reg"
+set "options_dir=%ALLUSERSPROFILE%\Canneverbe Limited\CDBurnerXP\"
 mkdir "%options_dir%"
 copy /y "%recipes_dir%%cdburnerxp_recipe_name%\Application.ini" "%options_dir%Application.ini"
 echo [done]
@@ -196,16 +196,16 @@ echo [done]
 :: Install Flash NPAPI
 
 echo Installing %flash_npapi_fullname%...
-start /w "" %downloads_dir%%flash_npapi_filename% -install -au 0
+start /w "" "%downloads_dir%%flash_npapi_filename%" -install -au 0
 echo [done]
 
 
 :: Install JRE
 
-set install_args=/s auto_update=1 web_analytics=0 eula=0 reboot=0 sponsors=0 removeoutofdatejres=1
+set "install_args=/s auto_update=1 web_analytics=0 eula=0 reboot=0 sponsors=0 removeoutofdatejres=1"
 echo Installing %java_x86_fullname%...
-start /w "" %downloads_dir%%java_x86_filename% %install_args%
+start /w "" "%downloads_dir%%java_x86_filename%" %install_args%
 echo [done]
 echo Installing %java_x64_fullname%...
-start /w "" %downloads_dir%%java_x64_filename% %install_args%
+start /w "" "%downloads_dir%%java_x64_filename%" %install_args%
 echo [done]
