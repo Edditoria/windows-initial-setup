@@ -110,22 +110,6 @@ exit /b 1
 echo.
 
 
-:: Install 7-Zip
-
-echo Installing %a_7_zip_x64_fullname%...
-start /w "" "%downloads_dir%%a_7_zip_x64_filename%" /S
-echo Setting options...
-reg import "%recipes_dir%%a_7_zip_recipe_name%\options.reg"
-reg import "%recipes_dir%%a_7_zip_recipe_name%\options.%lang%.reg"
-echo Simplifying app list in start menu,
-copy /y "%program_menu_allusers%7-Zip\7-Zip File Manager.lnk" "%program_menu_allusers%7-Zip File Manager.lnk"
-echo and adding shortcut to Desktop...
-copy /y "%program_menu_allusers%7-Zip\7-Zip File Manager.lnk" "%USERPROFILE%\Desktop\7-Zip File Manager.lnk"
-rmdir /s /q "%program_menu_allusers%7-Zip"
-echo [done]
-echo.
-
-
 :: Install Google Chrome
 
 echo Installing %google_chrome_x64_fullname%...
@@ -138,6 +122,19 @@ if exist "%PROGRAMFILES(X86)%\%master_preferences%" (
 if exist "%PROGRAMFILES%\%master_preferences%" (
 	copy /y "%recipes_dir%%google_chrome_recipe_name%\master_preferences.json" "%PROGRAMFILES%\%master_preferences%"
 )
+echo [done]
+echo.
+
+
+:: Install VLC
+
+echo Installing %vlc_x64_fullname%...
+start /w "" "%downloads_dir%%vlc_x64_filename%" /S
+echo Setting options...
+reg import "%recipes_dir%%vlc_recipe_name%\options.%lang%.reg"
+echo Simplifying app list in start menu...
+copy /y "%program_menu_allusers%VideoLAN\VLC media player.lnk" "%program_menu_allusers%VLC media player.lnk"
+rmdir /s /q "%program_menu_allusers%VideoLAN"
 echo [done]
 echo.
 
@@ -166,19 +163,6 @@ echo [done]
 echo.
 
 
-:: Install VLC
-
-echo Installing %vlc_x64_fullname%...
-start /w "" "%downloads_dir%%vlc_x64_filename%" /S
-echo Setting options...
-reg import "%recipes_dir%%vlc_recipe_name%\options.%lang%.reg"
-echo Simplifying app list in start menu...
-copy /y "%program_menu_allusers%VideoLAN\VLC media player.lnk" "%program_menu_allusers%VLC media player.lnk"
-rmdir /s /q "%program_menu_allusers%VideoLAN"
-echo [done]
-echo.
-
-
 :: Install CDBurnerXP
 
 echo Installing %cdburnerxp_fullname%...
@@ -189,6 +173,22 @@ reg import "%recipes_dir%%cdburnerxp_recipe_name%\options.%lang%.reg"
 set "options_dir=%ALLUSERSPROFILE%\Canneverbe Limited\CDBurnerXP\"
 mkdir "%options_dir%"
 copy /y "%recipes_dir%%cdburnerxp_recipe_name%\Application.ini" "%options_dir%Application.ini"
+echo [done]
+echo.
+
+
+:: Install 7-Zip
+
+echo Installing %a_7_zip_x64_fullname%...
+start /w "" "%downloads_dir%%a_7_zip_x64_filename%" /S
+echo Setting options...
+reg import "%recipes_dir%%a_7_zip_recipe_name%\options.reg"
+reg import "%recipes_dir%%a_7_zip_recipe_name%\options.%lang%.reg"
+echo Simplifying app list in start menu,
+copy /y "%program_menu_allusers%7-Zip\7-Zip File Manager.lnk" "%program_menu_allusers%7-Zip File Manager.lnk"
+echo and adding shortcut to Desktop...
+copy /y "%program_menu_allusers%7-Zip\7-Zip File Manager.lnk" "%USERPROFILE%\Desktop\7-Zip File Manager.lnk"
+rmdir /s /q "%program_menu_allusers%7-Zip"
 echo [done]
 echo.
 
