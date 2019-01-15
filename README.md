@@ -26,7 +26,7 @@ Currently there are 2 main commands: `download` and `install`.
 1. Assuming you download and extract the files in Downloads folder, do:
 
 	```
-	cd %userprofile%\Downloads\windows-initial-setup-1.0.2\
+	cd %userprofile%\Downloads\windows-initial-setup-1.0.3\
 	```
 
 1. Download all files, no matter which language:
@@ -49,16 +49,16 @@ Currently there are 2 main commands: `download` and `install`.
 
 # Applications To Install
 
-| App | Language Depends On | x86-32/-64 |
-| --- | ------------------- | ---------- |
-| 7-Zip                    | repo recipe | x64 |
-| Adobe Acrobat Reader DC  | Windows     | x86 |
-| Adobe Flash Player NPAPI | Windows     | x86 |
-| CDBurnerXP               | repo recipe | x86 |
-| Google Chrome            | Windows     | x64 |
-| Java Runtime (JRE)       | Windows     | both |
-| LibreOffice              | repo recipe | x86 |
-| VLC Media Player         | repo recipe | x64 |
+| App | Language Depends On | x86-32/-64 | Download Version |
+| --- | ------------------- | ---------- | ---------------- |
+| 7-Zip                    | repo recipe | x64  | specified |
+| Adobe Acrobat Reader DC  | Windows     | x86  | specified |
+| Adobe Flash Player NPAPI | Windows     | x86  | latest    |
+| CDBurnerXP               | repo recipe | x86  | specified |
+| Google Chrome            | Windows     | x64  | latest    |
+| Java Runtime (JRE)       | Windows     | both | specified |
+| LibreOffice              | repo recipe | x86  | latest    |
+| VLC Media Player         | repo recipe | x64  | specified |
 
 
 # Why This Repo
@@ -70,8 +70,6 @@ Currently there are 2 main commands: `download` and `install`.
 
 
 # Important Notice
-
-The codes **will change rapidly** until I think this repo fits for most cases (e.g. compatible to Windows XP). Please track the changes more often in the GitHub sources ([this repo][this-repo]).
 
 This repo works under the following conditions:
 
@@ -104,17 +102,17 @@ This repo is designed under the following assumptions:
 
 # Copyrights and Licenses
 
-Copyright (c) 2017-2018 Edditoria. All rights reserved.
+Copyright (c) 2017-2019 Edditoria. All rights reserved.
 
 Code released under the [MIT License](LICENSE.txt). In other words, you can use it, share it, modify the codes and distribute your work for private and commercial use. Remember to share your works to me. :pizza:
 
 Thank to awesome developers. This project uses some third-party codes and binaries, which have their own licenses:
 
 - **Curl** by Daniel Stenberg and all contributors :beer: [homepage](https://curl.haxx.se/) :beer: [MIT/X derivate license](https://curl.haxx.se/docs/copyright.html)
-- **Curl for Windows** by Viktor Szakáts :beer: [homepage](https://github.com/vszakats/harbour-deps) :beer: [MIT license](https://github.com/vszakats/harbour-deps/blob/master/LICENSE.md)
+- **Curl for Windows** by Viktor Szakáts :beer: [homepage](https://github.com/curl/curl-for-win) :beer: [MIT license](https://github.com/curl/curl-for-win/blob/master/LICENSE.md)
 
 I do not own any trademark and copyright of the application software, for example, Adobe, Google, Flash, JRE, etc. Please carefully read their user and distribution terms and agreements, and consult your lawyer especially if you are an OEM builder.
 
 
 [this-repo]: https://github.com/Edditoria/windows-initial-setup/
-[zip-link]: https://github.com/Edditoria/windows-initial-setup/archive/v1.0.2.zip
+[zip-link]: https://github.com/Edditoria/windows-initial-setup/releases/latest
