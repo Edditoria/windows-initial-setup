@@ -16,8 +16,8 @@ if not exist "%repo_dir%%nul%" (
 
 set "a_7_zip_recipe_name=7-zip"
 set "a_7_zip_x64_fullname=7-Zip (x64)"
-set "a_7_zip_x64_filename=7z1805-x64.exe"
-set "a_7_zip_x64_download_url=https://www.7-zip.org/a/7z1805-x64.exe"
+set "a_7_zip_x64_filename=7z1806-x64.exe"
+set "a_7_zip_x64_download_url=https://www.7-zip.org/a/7z1806-x64.exe"
 
 set "adobe_acrobat_reader_recipe_name=adobe-acrobat-reader"
 set "adobe_acrobat_reader_fullname=Adobe Acrobat Reader DC"
@@ -54,5 +54,5 @@ set "libreoffice_download_url=https://download.documentfoundation.org/libreoffic
 
 set "vlc_recipe_name=vlc"
 set "vlc_x64_fullname=VLC Media Player"
-set "vlc_x64_filename=vlc-3.0.4-win64.exe"
-set "vlc_x64_download_url=https://get.videolan.org/vlc/3.0.4/win64/vlc-3.0.4-win64.exe"
+set "vlc_x64_filename=vlc-3.0.6-win64.exe"
+set "vlc_x64_download_url=https://get.videolan.org/vlc/3.0.6/win64/vlc-3.0.6-win64.exe"
