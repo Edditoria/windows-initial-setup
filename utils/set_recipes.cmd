@@ -16,8 +16,8 @@ if not exist "%repo_dir%%nul%" (
 
 set "a_7_zip_recipe_name=7-zip"
 set "a_7_zip_x64_fullname=7-Zip (x64)"
-set "a_7_zip_x64_filename=7z1806-x64.exe"
-set "a_7_zip_x64_download_url=https://www.7-zip.org/a/7z1806-x64.exe"
+set "a_7_zip_x64_filename=7z1900-x64.exe"
+set "a_7_zip_x64_download_url=https://www.7-zip.org/a/7z1900-x64.exe"
 
 set "adobe_acrobat_reader_recipe_name=adobe-acrobat-reader"
 set "adobe_acrobat_reader_fullname=Adobe Acrobat Reader DC"
@@ -26,8 +26,8 @@ set "adobe_acrobat_reader_download_url=http://ardownload.adobe.com/pub/adobe/rea
 
 set "cdburnerxp_recipe_name=cdburnerxp"
 set "cdburnerxp_fullname=CDBurnerXP"
-set "cdburnerxp_filename=cdbxp_setup_4.5.8.7041.exe"
-set "cdburnerxp_download_url=https://download.cdburnerxp.se/cdbxp_setup_4.5.8.7041.exe"
+set "cdburnerxp_filename=cdbxp_setup_4.5.8.7042.exe"
+set "cdburnerxp_download_url=https://download.cdburnerxp.se/cdbxp_setup_4.5.8.7042.exe"
 
 set "flash_npapi_recipe_name=flash-npapi"
 set "flash_npapi_fullname=Adobe Flash Player NPAPI"
@@ -41,16 +41,16 @@ set "google_chrome_x64_download_url=https://dl.google.com/tag/s/dl/chrome/instal
 
 set "java_recipe_name=java"
 set "java_x86_fullname=Java Runtime (JRE) (x86)"
-set "java_x86_filename=jre-8u191-windows-i586.exe"
-set "java_x86_download_url=https://javadl.oracle.com/webapps/download/AutoDL?BundleId=235725_2787e4a523244c269598db4e85c51e0c"
+set "java_x86_filename=jre-8u201-windows-i586.exe"
+set "java_x86_download_url=https://javadl.oracle.com/webapps/download/AutoDL?BundleId=236886_42970487e3af4f5aa5bca3f542482c60"
 set "java_x64_fullname=Java Runtime (JRE) (x64)"
-set "java_x64_filename=jre-8u191-windows-x64.exe"
-set "java_x64_download_url=https://javadl.oracle.com/webapps/download/AutoDL?BundleId=235727_2787e4a523244c269598db4e85c51e0c"
+set "java_x64_filename=jre-8u201-windows-x64.exe"
+set "java_x64_download_url=https://javadl.oracle.com/webapps/download/AutoDL?BundleId=236888_42970487e3af4f5aa5bca3f542482c60"
 
 set "libreoffice_recipe_name=libreoffice"
 set "libreoffice_fullname=LibreOffice"
-set "libreoffice_filename=LibreOffice_6.0.7_Win_x86.msi"
-set "libreoffice_download_url=https://download.documentfoundation.org/libreoffice/stable/6.0.7/win/x86/LibreOffice_6.0.7_Win_x86.msi"
+set "libreoffice_filename=LibreOffice_6.1.5_Win_x86.msi"
+set "libreoffice_download_url=https://download.documentfoundation.org/libreoffice/stable/6.1.5/win/x86/LibreOffice_6.1.5_Win_x86.msi"
 
 set "vlc_recipe_name=vlc"
 set "vlc_x64_fullname=VLC Media Player"
