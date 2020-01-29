@@ -1,4 +1,4 @@
-# About This Repo
+## About This Repo
 
 This repo contains some scripts to automate:
 
@@ -16,7 +16,7 @@ If you often install Windows for others and you don't know what exactly s/he nee
 > Please read the section "Important Notice" below.
 
 
-# Usage
+## Usage
 
 Currently there are 2 main commands: `download` and `install`.
 
@@ -26,7 +26,7 @@ Currently there are 2 main commands: `download` and `install`.
 1. Assuming you download and extract the files in Downloads folder, do:
 
 	```
-	cd %userprofile%\Downloads\windows-initial-setup-1.0.3\
+	cd %userprofile%\Downloads\windows-initial-setup-1.0.4\
 	```
 
 1. Download all files, no matter which language:
@@ -47,7 +47,7 @@ Currently there are 2 main commands: `download` and `install`.
 	- If you only run `install`, it will assume you to `install en-US`
 
 
-# Applications To Install
+## Applications To Install
 
 | App | Language Depends On | x86-32/-64 | Download Version |
 | --- | ------------------- | ---------- | ---------------- |
@@ -61,7 +61,7 @@ Currently there are 2 main commands: `download` and `install`.
 | VLC Media Player         | repo recipe | x64  | specified |
 
 
-# Why This Repo
+## Why This Repo
 
 - **Simple**: No package manager. No extra stuff to install. Users will not ask you question.
 - ~~**Work in Windows XP**~~ (in future release): Batch scripts based. No need PowerShell.
@@ -69,7 +69,7 @@ Currently there are 2 main commands: `download` and `install`.
 - **Offline**: Once the file sources are ready, it does not eat your Internet bandwidth.
 
 
-# Important Notice
+## Important Notice
 
 This repo works under the following conditions:
 
@@ -91,7 +91,7 @@ This repo is designed under the following assumptions:
 - **Software licensing**: No matter you install software for personal or business use, you and your users are restricted by the license terms of that software, e.g. distribution (you) and user agreement (user) of Oracle Java Runtime Environment.
 
 
-# To-Do
+## To-Do
 
 - [ ] For `download` and `install`, check more for safety before running the core parts
 - [ ] Supports zh-TW and zh-CN
@@ -100,13 +100,15 @@ This repo is designed under the following assumptions:
 - [ ] Auto detect OS, architecture and language
 
 
-# Copyrights and Licenses
+## Copyrights and Licenses
 
-Copyright (c) 2017-2019 Edditoria. All rights reserved.
+Copyright (c) 2017-2020 Edditoria. All rights reserved. Code released under the [MIT License](LICENSE.txt). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/4.0/).
 
-Code released under the [MIT License](LICENSE.txt). In other words, you can use it, share it, modify the codes and distribute your work for private and commercial use. Remember to share your works to me. :pizza:
+As human-readable summary (but not a substitute for the license):
 
-Thank to awesome developers. This project uses some third-party codes and binaries, which have their own licenses:
+You can use it, share it, modify the codes and distribute your work for private and commercial uses. Please share your works to me. :pizza:
+
+Thanks to awesome developers. This project uses some third-party codes and binaries, which have their own licenses:
 
 - **Curl** by Daniel Stenberg and all contributors :beer: [homepage](https://curl.haxx.se/) :beer: [MIT/X derivate license](https://curl.haxx.se/docs/copyright.html)
 - **Curl for Windows** by Viktor Szakáts :beer: [homepage](https://github.com/curl/curl-for-win) :beer: [MIT license](https://github.com/curl/curl-for-win/blob/master/LICENSE.md)
