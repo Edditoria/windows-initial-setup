@@ -26,7 +26,7 @@ Currently there are 2 main commands: `download` and `install`.
 1. Assuming you download and extract the files in Downloads folder, do:
 
 	```
-	cd %userprofile%\Downloads\windows-initial-setup-1.0.4\
+	cd %userprofile%\Downloads\windows-initial-setup-1.0.5\
 	```
 
 1. Download all files, no matter which language:
@@ -57,7 +57,7 @@ Currently there are 2 main commands: `download` and `install`.
 | CDBurnerXP               | repo recipe | x86  | specified |
 | Google Chrome            | Windows     | x64  | latest    |
 | Java Runtime (JRE)       | Windows     | both | specified |
-| LibreOffice              | repo recipe | x86  | latest    |
+| LibreOffice              | repo recipe | x86  | specified |
 | VLC Media Player         | repo recipe | x64  | specified |
 
 
