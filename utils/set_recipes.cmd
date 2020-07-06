@@ -54,5 +54,5 @@ set "libreoffice_download_url=https://download.documentfoundation.org/libreoffic
 
 set "vlc_recipe_name=vlc"
 set "vlc_x64_fullname=VLC Media Player"
-set "vlc_x64_filename=vlc-3.0.10-win64.exe"
-set "vlc_x64_download_url=https://get.videolan.org/vlc/3.0.10/win64/vlc-3.0.10-win64.exe"
+set "vlc_x64_filename=vlc-3.0.11-win64.exe"
+set "vlc_x64_download_url=https://get.videolan.org/vlc/3.0.11/win64/vlc-3.0.11-win64.exe"
