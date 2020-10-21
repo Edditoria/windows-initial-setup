@@ -41,16 +41,16 @@ set "google_chrome_x64_download_url=https://dl.google.com/tag/s/dl/chrome/instal
 
 set "java_recipe_name=java"
 set "java_x86_fullname=Java Runtime (JRE) (x86)"
-set "java_x86_filename=jre-8u251-windows-i586.exe"
-set "java_x86_download_url=https://javadl.oracle.com/webapps/download/AutoDL?BundleId=242058_3d5a2bb8f8d4428bbe94aed7ec7ae784"
+set "java_x86_filename=jre-8u271-windows-i586.exe"
+set "java_x86_download_url=https://javadl.oracle.com/webapps/download/AutoDL?BundleId=243735_61ae65e088624f5aaa0b1d2d801acb16"
 set "java_x64_fullname=Java Runtime (JRE) (x64)"
-set "java_x64_filename=jre-8u251-windows-x64.exe"
-set "java_x64_download_url=https://javadl.oracle.com/webapps/download/AutoDL?BundleId=242060_3d5a2bb8f8d4428bbe94aed7ec7ae784"
+set "java_x64_filename=jre-8u271-windows-x64.exe"
+set "java_x64_download_url=https://javadl.oracle.com/webapps/download/AutoDL?BundleId=243737_61ae65e088624f5aaa0b1d2d801acb16"
 
 set "libreoffice_recipe_name=libreoffice"
 set "libreoffice_fullname=LibreOffice"
-set "libreoffice_filename=LibreOffice_6.3.6_Win_x86.msi"
-set "libreoffice_download_url=https://download.documentfoundation.org/libreoffice/stable/6.3.6/win/x86/LibreOffice_6.3.6_Win_x86.msi"
+set "libreoffice_filename=LibreOffice_6.4.6_Win_x86.msi"
+set "libreoffice_download_url=https://download.documentfoundation.org/libreoffice/stable/6.4.6/win/x86/LibreOffice_6.4.6_Win_x86.msi"
 
 set "vlc_recipe_name=vlc"
 set "vlc_x64_fullname=VLC Media Player"
