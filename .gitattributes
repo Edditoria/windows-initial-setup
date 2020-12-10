@@ -6,10 +6,20 @@
 *.cmd text eol=crlf
 *.ps1 text eol=crlf
 
+# Image files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg text
+
 # Config files specific for Windows
 *.cfg text eol=crlf
 *.ini text eol=crlf
 *.reg text eol=crlf
+*.dll binary
+*.exe binary
 
 # Default Windows Notepad program cannot handle LF line ending
 *.md text eol=crlf
@@ -19,8 +29,7 @@
 utils/curl/*.txt text eol=crlf
 utils/curl/*.crt text eol=lf
 
-# Binary
-*.dll binary
-*.exe binary
-*.png binary
-*.jpg binary
+# Exclude files from exporting
+.gitattributes export-ignore
+.gitignore export-ignore
+.gitkeep export-ignore

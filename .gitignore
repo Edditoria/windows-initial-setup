@@ -1,11 +1,6 @@
 # this repo
 # =========
 
-docs/.bundle/
-docs/vendor/
-docs/_site/
-docs/.sass-cache/
-
 downloads/*
 !downloads/readme.txt
 
@@ -18,31 +13,56 @@ downloads/*
    ###    ###  ###     ##   ##  #   #
             #
           ##
-# source: https://github.com/github/gitignore/blob/master/Global
+# Source: https://github.com/github/gitignore/blob/master/Global
 
 # Cloud9 IDE - http://c9.io
-# ===========
+# ==========
 
 .c9revisions
 .c9
 
 # Dropbox settings and caches
-# ===========
+# ==========
 
 .dropbox
 .dropbox.attr
 .dropbox.cache
 
-# MacOS
-# ===========
+# Windows
+# ==========
 
-*.DS_Store
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# MacOS
+# ==========
+
+# General
+.DS_Store
 .AppleDouble
 .LSOverride
-
-# Icon must end with two \r
-Icon
-
 
 # Thumbnails
 ._*
@@ -63,24 +83,8 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# Windows
+# Icon must end with two \r
+# Manually do: printf "Icon[\r]\n" >> .gitignore
 # ==========
-
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
-
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
+Icon[
+]
