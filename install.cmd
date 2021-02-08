@@ -37,8 +37,8 @@ echo - Adobe Acrobat Reader DC: https://www.adobe.com/content/dam/acom/en/legal/
 echo - Adobe Flash Player: https://www.adobe.com/content/dam/acom/en/legal/licenses-terms/pdf/Flash_Player_32_0.pdf
 echo - CDBurnerXP: https://cdburnerxp.se/help/intro/license
 echo - Google Chrome: https://www.google.com/chrome/browser/privacy/eula_text.html
-echo - Java Runtime (JRE): https://www.oracle.com/technetwork/java/javase/terms/license/index.html
-echo - LibreOffice: https://www.libreoffice.org/about-us/licenses/
+echo - Java Runtime (JRE): https://www.oracle.com/downloads/licenses/javase-license1.html
+echo - LibreOffice: https://www.libreoffice.org/about-us/licenses
 echo - VLC Media Player: https://www.videolan.org/legal.html
 echo.
 
