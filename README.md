@@ -102,7 +102,7 @@ This repo is designed under the following assumptions:
 
 ## Copyrights and Licenses
 
-Copyright (c) 2017-2020 Edditoria. All rights reserved. Code released under the [MIT License](LICENSE.txt). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/4.0/).
+Copyright (c) Edditoria. All rights reserved. Code released under the [MIT License](LICENSE.txt). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/4.0/).
 
 As human-readable summary (but not a substitute for the license):
 
