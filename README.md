@@ -1,4 +1,4 @@
-## About This Repo
+# About Windows-Initial-Setup
 
 This repo contains some scripts to automate:
 
@@ -9,11 +9,16 @@ This repo contains some scripts to automate:
 
 If you often install Windows for others and you don't know what exactly s/he needs, you may find this repo useful.
 
-> :exclamation: **Caution**:
+> :warning: **Default branch is now "main" instead of "master"**:
 >
-> This repo is still young and probably contains bugs.
-> Currently, it **only work on Windows 10 64-bit**.
-> Please read the section "Important Notice" below.
+> Reasons are simple:
+>
+> - I change it not because of political correctness about black or white.
+> - I'm complaining the **slavery policies on Hong Kongers enforced by CCP**.
+> - GitHub and GitLab had set "main" as default branch in all new projects. Change it earlier is better than later.
+> - The word "main" is just a better name. The default branch doesn't master on anything.
+>
+> The "master" branch will keep for some days for your convenience. Please adapt this change in your local repo. Thanks! :pray:
 
 
 ## Usage
@@ -71,6 +76,8 @@ Currently there are 2 main commands: `download` and `install`.
 
 ## Important Notice
 
+:warning: Currently, it **only work on Windows 10 64-bit**.
+
 This repo works under the following conditions:
 
 - The internet connection has to stable
@@ -106,7 +113,7 @@ Copyright (c) Edditoria. All rights reserved. Code released under the [MIT Licen
 
 As human-readable summary (but not a substitute for the license):
 
-You can use it, share it, modify the codes and distribute your work for private and commercial uses. Please share your works to me. :pizza:
+You can use it, share it, modify the code and distribute your work for private and commercial uses. If you like, please share your work to me. :pizza:
 
 Thanks to awesome developers. This project uses some third-party codes and binaries, which have their own licenses:
 
