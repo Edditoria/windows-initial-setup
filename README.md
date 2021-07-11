@@ -31,7 +31,7 @@ Currently there are 2 main commands: `download` and `install`.
 1. Assuming you download and extract the files in Downloads folder, do:
 
 	```
-	cd %userprofile%\Downloads\windows-initial-setup-1.0.10\
+	cd %userprofile%\Downloads\windows-initial-setup-1.0.11\
 	```
 
 1. Download all files, no matter which language:
