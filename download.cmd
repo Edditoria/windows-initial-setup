@@ -39,7 +39,6 @@ echo.
 cd "%downloads_dir%"
 
 call :func_download "%a_7_zip_x64_fullname%" "%a_7_zip_x64_download_url%" "%a_7_zip_x64_filename%"
-call :func_download "%flash_npapi_fullname%" "%flash_npapi_download_url%" "%flash_npapi_filename%"
 call :func_download "%cdburnerxp_fullname%" "%cdburnerxp_download_url%" "%cdburnerxp_filename%"
 call :func_download "%google_chrome_x64_fullname%" "%google_chrome_x64_download_url%" "%google_chrome_x64_filename%"
 call :func_download "%java_x86_fullname%" "%java_x86_download_url%" "%java_x86_filename%"

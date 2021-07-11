@@ -58,7 +58,6 @@ Currently there are 2 main commands: `download` and `install`.
 | --- | ------------------- | ---------- | ---------------- |
 | 7-Zip                    | repo recipe | x64  | specified |
 | Adobe Acrobat Reader DC  | Windows     | x86  | specified |
-| Adobe Flash Player NPAPI | Windows     | x86  | latest    |
 | CDBurnerXP               | repo recipe | x86  | specified |
 | Google Chrome            | Windows     | x64  | latest    |
 | Java Runtime (JRE)       | Windows     | both | specified |
@@ -120,7 +119,7 @@ Thanks to awesome developers. This project uses some third-party codes and binar
 - **Curl** by Daniel Stenberg and all contributors :beer: [homepage](https://curl.haxx.se/) :beer: [MIT/X derivate license](https://curl.haxx.se/docs/copyright.html)
 - **Curl for Windows** by Viktor Szakáts :beer: [homepage](https://github.com/curl/curl-for-win) :beer: [MIT license](https://github.com/curl/curl-for-win/blob/master/LICENSE.md)
 
-I do not own any trademark and copyright of the application software, for example, Adobe, Google, Flash, JRE, etc. Please carefully read their user and distribution terms and agreements, and consult your lawyer especially if you are an OEM builder.
+I do not own any trademark and copyright of the application software, for example, Adobe, Google, JRE, etc. Please carefully read their user and distribution terms and agreements, and consult your lawyer especially if you are an OEM builder.
 
 
 [this-repo]: https://github.com/Edditoria/windows-initial-setup/

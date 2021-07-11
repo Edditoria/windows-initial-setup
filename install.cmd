@@ -34,7 +34,6 @@ echo Please read them carefully:
 echo - This script: https://github.com/Edditoria/windows-initial-setup/blob/master/LICENSE.txt
 echo - 7-Zip: https://www.7-zip.org/license.txt
 echo - Adobe Acrobat Reader DC: https://www.adobe.com/content/dam/acom/en/legal/licenses-terms/pdf/PlatformClients_PC_WWEULA-en_US-20150407_1357.pdf
-echo - Adobe Flash Player: https://www.adobe.com/content/dam/acom/en/legal/licenses-terms/pdf/Flash_Player_32_0.pdf
 echo - CDBurnerXP: https://cdburnerxp.se/help/intro/license
 echo - Google Chrome: https://www.google.com/chrome/browser/privacy/eula_text.html
 echo - Java Runtime (JRE): https://www.oracle.com/downloads/licenses/javase-license1.html
@@ -84,7 +83,6 @@ echo.
 call "%utils_dir%is_installer_exist.cmd" "%a_7_zip_x64_filename%"
 call "%utils_dir%is_installer_exist.cmd" "%adobe_acrobat_reader_filename%"
 call "%utils_dir%is_installer_exist.cmd" "%cdburnerxp_filename%"
-call "%utils_dir%is_installer_exist.cmd" "%flash_npapi_filename%"
 call "%utils_dir%is_installer_exist.cmd" "%google_chrome_x64_filename%"
 call "%utils_dir%is_installer_exist.cmd" "%java_x86_filename%"
 call "%utils_dir%is_installer_exist.cmd" "%java_x64_filename%"
@@ -189,14 +187,6 @@ copy /y "%program_menu_allusers%7-Zip\7-Zip File Manager.lnk" "%program_menu_all
 echo and adding shortcut to Desktop...
 copy /y "%program_menu_allusers%7-Zip\7-Zip File Manager.lnk" "%USERPROFILE%\Desktop\7-Zip File Manager.lnk"
 rmdir /s /q "%program_menu_allusers%7-Zip"
-echo [done]
-echo.
-
-
-:: Install Flash NPAPI
-
-echo Installing %flash_npapi_fullname%...
-start /w "" "%downloads_dir%%flash_npapi_filename%" -install -au 0
 echo [done]
 echo.
 

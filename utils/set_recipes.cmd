@@ -29,11 +29,6 @@ set "cdburnerxp_fullname=CDBurnerXP"
 set "cdburnerxp_filename=cdbxp_setup_4.5.8.7128_minimal.exe"
 set "cdburnerxp_download_url=https://download.cdburnerxp.se/cdbxp_setup_4.5.8.7128_minimal.exe"
 
-set "flash_npapi_recipe_name=flash-npapi"
-set "flash_npapi_fullname=Adobe Flash Player NPAPI"
-set "flash_npapi_filename=install_flash_player.exe"
-set "flash_npapi_download_url=https://fpdownload.macromedia.com/pub/flashplayer/latest/help/install_flash_player.exe"
-
 set "google_chrome_recipe_name=google-chrome"
 set "google_chrome_x64_fullname=Google Chrome (x64)"
 set "google_chrome_x64_filename=googlechromestandaloneenterprise64.msi"
